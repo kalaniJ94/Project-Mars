@@ -1,22 +1,29 @@
-var marsApiKey = "AdhU2LA6gNybWHFTtnQ6DdCSS5EfM4pWLhNJWVHK";
+function kelvinToFahrenheit(K) {
+  return (9/5) * (K - 273.15) + 32;
+}
 
 function getMarsData() {
   
-  var apiUrl = "https://api.nasa.gov/insight_weather/?api_key=" + marsApiKey + "&feedtype=json&ver=1.0";
+  var apiUrl = "https://api.le-systeme-solaire.net/rest/bodies/mars";
 
   fetch(apiUrl)
   .then(function (response) {
     if (response.ok) {
       return response.json();
     } else {
-      throw new Error('Error: ' + response.statusText);
+      throw new Error('Error');
     }
   })
   .then(function (data) {
     console.log(data);
+    var marsTempInKelvin = data.avgTemp;
+    var marsTempInFahrenheit = Math.round(kelvinToFahrenheit(marsTempInKelvin));
+
+    console.log("Average Temp of Mars: " +marsTempInFahrenheit + "°F");
+
   })
   .catch(function (error) {
-    console.error('There was an issue with fetching the Mars data:', error);
+    console.error("There was an issue with fetching the Planet's data:", error);
   });
 }
 
