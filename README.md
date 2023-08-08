@@ -5,6 +5,7 @@
 
 2. As a User, I want to see images of our solar system, so that when I look at the data, I can have a visual. 
 
+
 # Acceptance Criteria
 
 ## Description

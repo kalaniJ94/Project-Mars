@@ -21,3 +21,9 @@ Rough Breakdown of tasks:
     HTML Expert: Colton
     CSS: Colton
     JavaScript (Primary… everyone should have some part of the JS): Kalani, Alexa, Colton
+
+    8/7: 
+
+    8/8: Kalani gets SASS up and running on CSS
+        Alexa gets local storage going
+        Colton gets caught up, HTML and CSS
