@@ -32,17 +32,21 @@ function getMarsData() {
 
 
 function getNasaPhoto(){
-  var photoApi = "https://api.nasa.gov/planetary/apod?api_key=" + nasaApiKey;
+  var photoApi = "https://api.nasa.gov/planetary/apod?count=1&api_key=" + nasaApiKey;
   fetch(photoApi)
   .then(function (response) {
     if (response.ok) {
       return response.json();
     } else {
-      throw new Error('Error');
+      throw new Error();
     }
   })
   .then(function (data) {
-    console.log(data.hdurl);
+    console.log(data);
+    document.body.style.backgroundImage = 'url(' + data[0].hdurl + ')';
+    document.body.style.backgroundSize = 'cover'; 
+    document.body.style.backgroundPosition = 'center';  
+    document.body.style.backgroundRepeat = 'no-repeat';  
 
   })
   .catch(function (error) {
