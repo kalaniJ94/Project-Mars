@@ -1,4 +1,6 @@
 var nasaApiKey = "AdhU2LA6gNybWHFTtnQ6DdCSS5EfM4pWLhNJWVHK";
+var mainDropDown = document.querySelector('.drop-button');
+
 
 function kelvinToFahrenheit(K) {
   return (9/5) * (K - 273.15) + 32;
@@ -6,7 +8,7 @@ function kelvinToFahrenheit(K) {
 
 function getMarsData() {
   
-  var apiUrl = "https://api.le-systeme-solaire.net/rest/bodies/mars";
+  var apiUrl = "https://api.le-systeme-solaire.net/rest/bodies/moon";
 
   fetch(apiUrl)
   .then(function (response) {
