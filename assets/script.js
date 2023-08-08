@@ -8,7 +8,6 @@ function kelvinToFahrenheit(K) {
 
 planetQueries.forEach(function(planet) {
     planet.addEventListener('click', function(event) {
-        // Prevent default action of <a>
         event.preventDefault();
 
         var selectedPlanet = event.target.textContent.trim();
@@ -16,6 +15,7 @@ planetQueries.forEach(function(planet) {
     });
 });
 
+// gets the planet information
 function getPlanetData(planetName) {
     var apiUrl = "https://api.le-systeme-solaire.net/rest/bodies/" + planetName;
 
@@ -29,9 +29,15 @@ function getPlanetData(planetName) {
     })
     .then(function (data) {
         console.log(data);
+        var planetDensity = data.density;
+        // moons will be more complicated.
+        // var planetNumberOfMoons = data.moons;
+        // var planetNameOfMoons = data.moons.moon;
+        var planetGravity = data.gravity;
         var planetTempInKelvin = data.avgTemp;
         var planetTempInFahrenheit = Math.round(kelvinToFahrenheit(planetTempInKelvin));
         console.log("Average Temp of " + planetName + ": " + planetTempInFahrenheit + "°F");
+        console.log(`Density: ${planetDensity}  Gravity: ${planetGravity}`);
     })
     .catch(function (error) {
         console.error("There was an issue with fetching the Planet's data:", error);
