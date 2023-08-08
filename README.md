@@ -1,5 +1,4 @@
-# Project-Mars
-Side by side weather comparison
+# Project-Space
 
 # User Story
 1. As a User, I want to search through Celestial Bodies in our Solar System, So that I can see how our planet compares to other bodies in our system. 
