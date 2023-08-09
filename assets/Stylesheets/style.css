@@ -72,6 +72,8 @@ main body {
 
 #explainEL {
   border: solid 1px black;
+  font-family: "Londrina Shadow", cursive;
+  color: white;
 }
 
 footer {
@@ -79,61 +81,4 @@ footer {
   margin-top: auto;
   color: white;
   text-align: center;
-}
-
-#dataHeader {
-  background-color: grey;
-  height: 50px;
-}
-
-#dataSect {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-#dataSect #dataDropdown {
-  height: 50px;
-  width: 30%;
-}
-#dataSect #dataDropdown .data-center-wrapper {
-  width: 50px;
-  height: 50px;
-  margin: 0px 0px 0px 50px;
-  min-width: none;
-}
-#dataSect #dataDropdown .data-dropdown-button {
-  cursor: pointer;
-  font-family: "Handjet", cursive;
-  background-color: black;
-  color: white;
-  text-align: center;
-  white-space: nowrap;
-  padding: 20%;
-  border-radius: 10px;
-}
-#dataSect #inputInfo {
-  height: 100px;
-  width: 70%;
-}
-
-#dataMain {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  border: black solid 2px;
-  background-color: whitesmoke;
-}
-#dataMain #inputPlanet {
-  width: 49%;
-  height: 400px;
-  border: solid black 1px;
-}
-#dataMain #earthInfo {
-  width: 49%;
-  height: 400px;
-}
-
-#dataFooter {
-  background-color: grey;
-  height: 50px;
 }/*# sourceMappingURL=style.css.map */
