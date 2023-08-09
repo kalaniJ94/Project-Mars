@@ -32,6 +32,7 @@ function getPlanetData(planetName) {
     .then(function (data) {
       console.log(data);
       var planetChosen = data.englishName;
+      console.log(planetChosen);
       var planetDensity = data.density;
       // Moons
       var planetNumberOfMoons = 0;
@@ -58,7 +59,7 @@ function getPlanetData(planetName) {
 
       //store items in local storage
       
-      localStorage.setItem("planetName", planetName.toString());
+      localStorage.setItem("planetChosen", planetChosen.toString());
       localStorage.setItem("planetGravity", planetGravity.toString());
       localStorage.setItem(
         "planetTempInFahrenheit",
