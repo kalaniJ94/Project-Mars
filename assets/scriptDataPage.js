@@ -1,4 +1,4 @@
-var planetChosen = parseFloat(localStorage.getItem("planetName"));
+var retrievedPlanet = localStorage.getItem("planetChosen");
 var planetGravity = parseFloat(localStorage.getItem("planetGravity"));
 var planetTempInFahrenheit = parseFloat(localStorage.getItem("planetTempInFahrenheit"));
 var planetDensity = parseFloat(localStorage.getItem("planetDensity"));
@@ -8,6 +8,7 @@ var planetNameOfMoons = JSON.parse(localStorage.getItem("planetNameOfMoons"));
 
 
 // testing
+console.log(`Object: ${retrievedPlanet}`);
 console.log(`Gravity: ${planetGravity}`);
 console.log(`Temperature in Fahrenheit: ${planetTempInFahrenheit}`);
 console.log(`Density: ${planetDensity}`);
