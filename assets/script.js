@@ -1,6 +1,6 @@
 var nasaApiKey = "AdhU2LA6gNybWHFTtnQ6DdCSS5EfM4pWLhNJWVHK";
-var mainDropDown = document.querySelector(".drop-button");
 var planetQueries = document.querySelectorAll(".dropdown-content a");
+var dropDownSelection = document.getElementById('button');
 
 function kelvinToFahrenheit(K) {
   return (9 / 5) * (K - 273.15) + 32;
@@ -12,6 +12,7 @@ planetQueries.forEach(function (planet) {
 
     var selectedPlanet = event.target.textContent.trim();
     getPlanetData(selectedPlanet);
+    window.location.href = '/dataPage.html'; //take user to new page
   });
 });
 
