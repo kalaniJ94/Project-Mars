@@ -1,8 +1,11 @@
+var planetChosen = parseFloat(localStorage.getItem("planetName"));
 var planetGravity = parseFloat(localStorage.getItem("planetGravity"));
 var planetTempInFahrenheit = parseFloat(localStorage.getItem("planetTempInFahrenheit"));
 var planetDensity = parseFloat(localStorage.getItem("planetDensity"));
 var planetNumberOfMoons = parseInt(localStorage.getItem("planetNumberOfMoons"), 10);
 var planetNameOfMoons = JSON.parse(localStorage.getItem("planetNameOfMoons"));
+
+
 
 // testing
 console.log(`Gravity: ${planetGravity}`);
