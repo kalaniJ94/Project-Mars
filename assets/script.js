@@ -2,6 +2,7 @@ var nasaApiKey = "AdhU2LA6gNybWHFTtnQ6DdCSS5EfM4pWLhNJWVHK";
 var mainDropDown = document.querySelector('.drop-button');
 var planetQueries = document.querySelectorAll('.dropdown-content a');
 
+
 function kelvinToFahrenheit(K) {
   return (9/5) * (K - 273.15) + 32;
 }
@@ -58,7 +59,18 @@ function getNasaPhoto(){
   })
   .then(function (data) {
     console.log(data);
-    // sets the background of the page to image gathered
+    var dateTaken = data[0].date;
+    console.log(dateTaken);
+    var photoDescription = data[0].explanation;
+    var photoExplanation = document.querySelector('#explainEL');
+    photoExplanation.textContent= photoDescription;
+    console.log(photoDescription);
+    
+    var copyRight = data[0].copyright;
+    if (copyRight) {
+      var copyRightInformation = document.querySelector('#photoInfo');
+      copyRightInformation.textContent = `Copyright: ${copyRight}`;
+    }
     document.body.style.backgroundImage = 'url(' + data[0].hdurl + ')';
     document.body.style.backgroundSize = 'cover'; 
     document.body.style.backgroundPosition = 'center';  
