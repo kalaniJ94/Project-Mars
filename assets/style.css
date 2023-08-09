@@ -72,6 +72,9 @@ body {
 
 #explainEL {
   border: solid 1px yellow;
+  background-color: black;
+  color: white;
+  font-size: 20px;
 }
 
 footer {
