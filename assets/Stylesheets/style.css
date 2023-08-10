@@ -74,6 +74,7 @@ main body {
   border: solid 1px black;
   font-family: "Londrina Shadow", cursive;
   color: white;
+  font: 20px;
 }
 
 footer {
