@@ -84,3 +84,19 @@ function getPlanetData(planetName) {
       );
     });
 }
+
+function planetData(){
+  var infoDisplay = document.querySelector("#textarea");
+
+  var planetNames = ["Moon", "Venus", "Mercury", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune", "Pluto"];
+  var planetInfo = ["The Moon, Earth's only natural satellite and the only other place in the Solar System where humans have stepped foot. Likely formed billions of years ago when a large body slammed into the Earth. The Earth has a intertwined relationship with it's 'little sibling', through complicated tidal and gravitational systems.", "Venus is often referred to as Earth's 'twin', due to its similar size and density. Venus' atmosphere is thick and toxic, with an ongoing runaway greenhouse gas effect which renders it the hottest planet in the solar system." , "Mercury, the closest planet to the Sun, enjoys a view of the star that is three times larger and eleven times brighter than here on Earth. It hols the title of Smallest planet in the Solar System, as well as the fastest, with a solar orbit of only 88 days!" , "The last rocky planet in the Solar system, Mars is home to a dusty, cold dessert environment. Emerging evidence, however, paints the planet as once hosting a much warmer and wetter atmosphere. One of the most explored bodies in our Solar System, it is home to two rovers, one lander and even a helicopter!", "By far the largest planet in the Solar System, Jupiter is larger than every other planet combined... twice! It is striped with swirling clouds of ammonia and water, floating in the atmosphere, including the famous Giant red spot, a hundreds year old hurricane the size of Earth." ,"Saturn most famous feature is it's dazzling, complex system of icy rings. Thousands of them ring the planet around it's axis. They are made up of large ice and rock chunks primarily, and a few are even theorized to be capable of supporting life!", "Uranus, besides being the butt of many jokes, is the seventh planet from the Sun. It rotates on a 90 degree axis, causing it to spin 'sideways' It is an ice giant, mostly made up of water, methane and ammonia." , "Neptune is the farthest planet from the sun, and was the first planet to be discovered through mathematical calculation. Not visible to Earth with the naked eye, the planet has been visit only once, by Voyager 2 in 1989." , "Last, but certainly not least, Pluto is the best known of the 'dwarf-planets' which orbit the Sun. Once thought to be a ball of ice, recent flybys have made it's rocky nature plain."];
+
+  for (var i = 0; i < planetNames.length; i++) {
+    if (retrievedPlanet === planetNames[i]) {
+      infoDisplay.textContent = planetInfo[i];
+      break; // Assuming you want to exit the loop after finding a match
+    }
+  }
+
+};
+planetData();
