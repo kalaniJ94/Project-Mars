@@ -1,6 +1,7 @@
 var nasaApiKey = "AdhU2LA6gNybWHFTtnQ6DdCSS5EfM4pWLhNJWVHK";
 var planetQueries = document.querySelectorAll(".dropdown-content a");
 var dropDownSelection = document.getElementById('button');
+var explanationEl = document.getElementById('explainEL');
 
 function kelvinToFahrenheit(K) {
   return (9 / 5) * (K - 273.15) + 32;
@@ -12,7 +13,7 @@ planetQueries.forEach(function (planet) {
 
     var selectedPlanet = event.target.textContent.trim();
     getPlanetData(selectedPlanet);
-    window.location.href = '/dataPage.html'; //take user to new page
+    
   });
 });
 
@@ -30,6 +31,8 @@ function getPlanetData(planetName) {
     })
     .then(function (data) {
       console.log(data);
+      var planetChosen = data.englishName;
+      console.log(planetChosen);
       var planetDensity = data.density;
       // Moons
       var planetNumberOfMoons = 0;
@@ -55,6 +58,8 @@ function getPlanetData(planetName) {
       console.log(`Density: ${planetDensity}  Gravity: ${planetGravity}`);
 
       //store items in local storage
+      
+      localStorage.setItem("planetChosen", planetChosen.toString());
       localStorage.setItem("planetGravity", planetGravity.toString());
       localStorage.setItem(
         "planetTempInFahrenheit",
@@ -69,6 +74,9 @@ function getPlanetData(planetName) {
         "planetNameOfMoons",
         JSON.stringify(planetNameOfMoons)
       );
+
+      window.location.href = '/dataPage.html'; //take user to new page
+
     })
     .catch(function (error) {
       console.error(
@@ -92,6 +100,11 @@ function getNasaPhoto() {
     })
     .then(function (data) {
       console.log(data);
+
+      // add text
+      var photoInformation = data[0].explanation;
+      explanationEl.textContent = photoInformation;
+
       var dateTaken = data[0].date;
       var dateFormat = dayjs(dateTaken).format("MMMM D, YYYY");
       console.log(dateFormat);
