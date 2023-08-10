@@ -13,7 +13,7 @@ planetQueries.forEach(function (planet) {
 
     var selectedPlanet = event.target.textContent.trim();
     getPlanetData(selectedPlanet);
-    window.location.href = '/dataPage.html'; //take user to new page
+    
   });
 });
 
@@ -74,6 +74,9 @@ function getPlanetData(planetName) {
         "planetNameOfMoons",
         JSON.stringify(planetNameOfMoons)
       );
+
+      window.location.href = '/dataPage.html'; //take user to new page
+
     })
     .catch(function (error) {
       console.error(
