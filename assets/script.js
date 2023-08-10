@@ -46,6 +46,7 @@ function getPlanetData(planetName) {
       }
       console.log(planetNumberOfMoons);
       console.log(planetNameOfMoons);
+      console.log("Hello There");
 
       var planetGravity = data.gravity;
       var planetTempInKelvin = data.avgTemp;
