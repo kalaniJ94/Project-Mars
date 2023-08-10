@@ -132,6 +132,7 @@ function displayImage() {
   // create element and img src
   var displayPlanetImg = document.createElement("img");
   displayPlanetImg.src = `./assets/images/${object}.png`;
+  // append
   planetImageEl.append(displayPlanetImg);
 }
 
