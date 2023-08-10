@@ -115,4 +115,15 @@ function displayData() {
   planetDataEl.append(displayPlanet, displayGravty, displayAvgTemp, displayDensity, displayMoons, displayMoonsArray);
 }
 
+function displayImage() {
+  var planetImageEl = document.querySelector("#inputPlanet");
+  // gather object
+  var object = retrievedPlanet.toLowerCase();
+  // create element and img src
+  var displayPlanetImg = document.createElement("img");
+  displayPlanetImg.src = `./assets/images/${object}.png`;
+  planetImageEl.append(displayPlanetImg);
+}
+
 displayData();
+displayImage();
