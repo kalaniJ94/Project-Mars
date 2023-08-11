@@ -7,7 +7,8 @@ body {
 }
 
 main {
-  border: solid blue 1px;
+  background-color: black;
+  margin-bottom: 50px;
 }
 main body {
   display: flex;
@@ -75,6 +76,7 @@ main body {
   font-family: "Londrina Shadow", cursive;
   color: white;
   font: 20px;
+  background-color: black;
 }
 
 footer {
@@ -93,6 +95,9 @@ footer {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  height: 10%;
+  background-color: black;
+  color: whitesmoke;
 }
 #dataSect #dataDropdown {
   height: 50px;
@@ -125,18 +130,36 @@ footer {
   flex-wrap: wrap;
   border: black solid 2px;
   background-color: whitesmoke;
+  height: 80%;
 }
 #dataMain #inputPlanet {
   width: 49%;
   height: 400px;
-  border: solid black 1px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+#dataMain #inputPlanet img {
+  max-width: 200px;
+  max-height: 200px;
+  display: flex;
+  justify-content: end;
 }
 #dataMain #earthInfo {
   width: 49%;
   height: 400px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+#dataMain #earthInfo #earth-photo {
+  display: flex;
+  max-width: 200px;
+  max-height: 200px;
+  justify-content: right;
 }
 
-#dataFooter {
-  background-color: grey;
-  height: 50px;
+.dataFooter {
+  background-color: black;
+  height: 15%;
 }/*# sourceMappingURL=style.css.map */
