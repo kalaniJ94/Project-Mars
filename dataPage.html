@@ -14,9 +14,6 @@
 </head>
 
 <body>
-    <header id="dataHeader">
-        Congrats! you have chosen a planet.
-    </header>
     <section id="dataSect">
         <section id="dataDropdown">
             <div class="data-center-wrapper">
@@ -43,11 +40,14 @@
     </section>
     
     <main id="dataMain">
-        <section id="inputPlanet">
-            <ul id="planet-data" style="list-style: none"></ul>
+        <section >
+        <ul id="planet-data" attr='test' style="list-style: none"></ul>
+        <div id="inputPlanet"></div>
         </section>
+       
 
-        <section id="earthInfo">Info about Earth will go here
+        <section id="earthInfo">
+            <!-- earth data -->
             <ul id="earth-data" style="list-style: none">
                 <li>Object: Earth</li>
                 <li>Gravity: 9.8</li>
@@ -60,7 +60,7 @@
         </section>
     </main>
 
-    <footer class="planet-photo">Maybe "Made by Project-Space"</footer>
+    <footer class="dataFooter">"Made by Project-Space: Alexa, Colton and Kalani!"</footer>
 
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
         integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
