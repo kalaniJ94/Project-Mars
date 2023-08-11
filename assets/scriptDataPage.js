@@ -32,8 +32,12 @@ planetLinks.forEach(function (link) {
     var planetName = event.target.textContent.trim();
 
     // Call the getPlanetData function and pass the planet's name
-    getPlanetData(planetName);
+    getPlanetData(planetName).then(() => {
+      displayData(planetName);
+      displayImage(planetName);
+      planetData(planetName);
   });
+});
 });
 
 // gets the planet information
@@ -86,8 +90,15 @@ function getPlanetData(planetName) {
 }
 
 function displayData() {
+
   // select the ul to append the list items to
   var planetDataEl = document.querySelector("#planet-data");
+
+    // remove previous image
+  while(planetDataEl.firstChild) {
+    planetDataEl.removeChild(planetDataEl.firstChild);
+  }
+
   // gather local storage elements
   var planet = `Object: ${retrievedPlanet}`;
   var gravity = `Gravity: ${planetGravity}`;
@@ -98,35 +109,29 @@ function displayData() {
 
   // create a new tag for each element
   var displayPlanet = document.createElement("li");
-  var displayGravty = document.createElement("li");
+  var displayGravity = document.createElement("li");
   var displayAvgTemp = document.createElement("li");
   var displayDensity = document.createElement("li");
   var displayMoons = document.createElement("li");
   var displayMoonsArray = document.createElement("li");
   
   displayPlanet.textContent = planet;
-  displayGravty.textContent = gravity;
+  displayGravity.textContent = gravity;
   displayAvgTemp.textContent = avgTemp;
   displayDensity.textContent = density;
   displayMoons.textContent = moons;
   displayMoonsArray.textContent = moonsArray;
   
   // append to the html
-  planetDataEl.append(displayPlanet, displayGravty, displayAvgTemp, displayDensity, displayMoons, displayMoonsArray);
+  planetDataEl.append(displayPlanet, displayGravity, displayAvgTemp, displayDensity, displayMoons, displayMoonsArray);
 }
 
 function displayImage() {
   var planetImageEl = document.querySelector("#inputPlanet");
-  // gather object
-  var object = retrievedPlanet.toLowerCase();
-  // create element and img src
-  var displayPlanetImg = document.createElement("img");
-  displayPlanetImg.src = `./assets/images/${object}.png`;
-  planetImageEl.append(displayPlanetImg);
-}
-
-function displayImage() {
-  var planetImageEl = document.querySelector("#inputPlanet");
+  // remove previous image
+  while (planetImageEl.firstChild) {
+    planetImageEl.removeChild(planetImageEl.firstChild);
+  }
   // gather object
   var object = retrievedPlanet.toLowerCase();
   // create element and img src
@@ -151,7 +156,5 @@ function planetData(){
   
 };
 
-displayData();
-displayImage();
-planetData();
+
 
