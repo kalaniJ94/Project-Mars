@@ -143,7 +143,6 @@ footer {
   justify-content: space-around;
 }
 #dataMain #inputPlanet img {
-  max-width: 200px;
   max-height: 200px;
   display: flex;
   justify-content: end;

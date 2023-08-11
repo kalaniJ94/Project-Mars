@@ -174,7 +174,7 @@ function getPlanetData(planetName) {
           displayMoonsArray2.textContent = `Names of Moons: ${planetNameOfMoons}`;
 
           console.log(displayDensity2);
-
+            console.log(displayPlanet2, displayGravity2, displayAvgTemp2, )
           // Append these list items to planetDataEl2
           planetDataEl2.append(displayPlanet2, displayGravity2, displayAvgTemp2, displayDensity2, displayMoons2, displayMoonsArray2);
 
