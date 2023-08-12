@@ -3,7 +3,6 @@ var planetDataEl = document.getElementById('planet-data');
 var infoDisplay = document.querySelector("#textarea");
 var planetImageEl = document.querySelector("#inputPlanet");
 
-var planetDataEl2 = document.getElementById('planet-data-2');
 
 var storedRetrievedPlanet = localStorage.getItem("planetChosen");
 var storedPlanetGravity = parseFloat(localStorage.getItem("planetGravity"));
@@ -52,8 +51,13 @@ function kelvinToFahrenheit(K) {
   return (9 / 5) * (K - 273.15) + 32;
 }
 
+function clearData (){
+  planetDataEl.textContent = "";
+  planetImageEl.textContent = "";
+  planetInfo.textContent = "";
+}
 
-
+// Data from Local Storage
 function displayData() {
   // select the ul to append the list items to
 
@@ -104,7 +108,6 @@ function displayImage() {
 }
 
 function planetData() {
-  var infoDisplay = document.querySelector("#textarea");
 
   for (var i = 0; i < planetNames.length; i++) {
     if (storedRetrievedPlanet === planetNames[i]) {
@@ -134,10 +137,6 @@ function getPlanetData(planetName) {
       .then(function(data) {
           // console.log(data);
 
-          // Remove old information and images
-          planetDataEl.textContent = "";
-          planetImageEl.textContent = "";
-          infoDisplay.textContent = "";
 
           // Populate new information
           var planetChosen = data.englishName;
@@ -173,15 +172,17 @@ function getPlanetData(planetName) {
           displayMoons2.textContent = `Number of Moons: ${planetNumberOfMoons}`;
           displayMoonsArray2.textContent = `Names of Moons: ${planetNameOfMoons}`;
 
-          console.log(displayDensity2);
-            console.log(displayPlanet2, displayGravity2, displayAvgTemp2, )
-          // Append these list items to planetDataEl2
-          planetDataEl2.append(displayPlanet2, displayGravity2, displayAvgTemp2, displayDensity2, displayMoons2, displayMoonsArray2);
+          // console.log(displayDensity2);
 
+          // Append these list items to planetDataEl2
+          planetDataEl.append(displayPlanet2, displayGravity2, displayAvgTemp2, displayDensity2, displayMoons2, displayMoonsArray2);
+          
+          
           // Append the image based on the planet's name
           var planetImg = document.createElement("img");
           planetImg.src = `./assets/images/${planetName.toLowerCase()}.png`;
           planetImageEl.appendChild(planetImg);
+          console.log('hello!?', planetDataEl)
 
           // Append short info blurb based on planet's name
           // ... This assumes you already have the planetNames and planetInfo arrays available ...
@@ -191,6 +192,9 @@ function getPlanetData(planetName) {
                   break;
               }
           }
+
+          
+           
       })
       .catch(function(error) {
           console.error(
@@ -203,12 +207,12 @@ function getPlanetData(planetName) {
 planetLinks.forEach(function (link) {
   link.addEventListener("click", function (event) {
     event.preventDefault(); // Prevent the default of <a> tags
-    planetDataEl.textContent = "";
-    planetImageEl.textContent = "";
+    clearData();
     // Get the planet's name from the text content of the link
     var planetName = event.target.textContent.trim();
 
     // Call the getPlanetData function and pass the planet's name
+    console.log("new planet", planetDataEl)
     getPlanetData(planetName);
   });
 });
