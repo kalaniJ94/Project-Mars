@@ -14,9 +14,16 @@ main {
   body {
     display: flex;
     flex-direction: column;
-    flex: 1;
     min-height: 100vh;
   }
+}
+
+.page-container {
+  flex: 1 0 auto; /* This allows the container to grow in the available space */
+}
+
+.content-wrap {
+  flex: 1; /* This makes the content area grow to take up any available space */
 }
 
 .center-wrapper {
@@ -81,18 +88,11 @@ main {
   font-family: 'Handjet', cursive;
   color: white;
   background-color: black;
-  font: 25px;
+  font: 40px;
 
 }
 
-footer {
-  border: solid 1px black;
-  margin-top: auto;
-  font-family: 'Handjet', cursive;
-  background-color: black;
-  color: white;
-  text-align: center;
-}
+
 
 //this styles the planet input text
 .style-box {
@@ -198,9 +198,13 @@ footer {
     }
     }
   }
-  
-.dataFooter{
+
+footer {
+  margin-top: auto;
+  font-family: 'Handjet', cursive;
   background-color: black;
-  height: 15%;
+  color: white;
+  text-align: center;
+  
 }
 

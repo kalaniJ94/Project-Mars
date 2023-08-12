@@ -40,9 +40,13 @@ To add a screenshot, create an `assets/images` folder in your repository and upl
 
 ## Credits
 
+Planet Information planet API
+https://api.le-systeme-solaire.net/en/
 
+Website for NASA API Photo of the Day
+https://api.nasa.gov/
 
-Website for Data Page Image:
+Website for Data Page Background Image:
 https://www.nasa.gov/multimedia/imagegallery/iotd.html
 
 https://www.w3schools.com/w3css/default.asp
