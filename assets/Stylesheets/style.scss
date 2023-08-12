@@ -3,7 +3,7 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: #290c88;
+
 }
 
 main {
@@ -18,8 +18,6 @@ main {
     min-height: 100vh;
   }
 }
-
-
 
 .center-wrapper {
   display: flex;
@@ -178,7 +176,6 @@ footer {
     
 
     img{
-      max-width: 200px;
       max-height: 200px;
       display: flex;
       justify-content: end;
