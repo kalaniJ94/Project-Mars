@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@300&family=Shadows+Into+Light&display=swap"
         rel="stylesheet">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="./assets/Stylesheets/style.css">
 </head>
 
@@ -53,12 +54,16 @@
             <ul id="earth-data"  style="list-style: none">
                 <li>Object: Earth</li>
                 <li>Gravity: 9.8</li>
-                <li>Temperature in Farenheit: 59</li>
+                <li>Temperature in Fahrenheit: 59</li>
                 <li>Density: 5.5136</li>
                 <li>Number of Moons: 1</li>
                 <li>Names of Moons: La Lune</li>
             </ul>
-            <img id="earth-photo" src="./assets/images/earth.png" alt="Planet Earth">
+            <img id="earth-photo" src="./assets/images/earth.png" alt="Planet Earth" onclick="document.getElementById('modal01').style.display='block'" class="w3-hover-opacity">
+            <div id="modal01" class="w3-modal w3-animate-zoom" onclick="this.style.display='none'">
+                <img class="w3-modal-content" src="./assets/images/earth.png" style="width:100%">
+              </div>
+
         </section>
     </main>
 
