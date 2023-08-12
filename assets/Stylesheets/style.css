@@ -149,6 +149,7 @@ footer {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+
   border: black solid 2px;
   background-image: url("/assets/images/background3.png");
   background-position: center center;
