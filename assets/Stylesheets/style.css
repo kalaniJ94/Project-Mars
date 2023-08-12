@@ -80,7 +80,6 @@ main body {
   color: white;
   background-color: black;
   font: 25px;
-
 }
 
 footer {
@@ -90,6 +89,16 @@ footer {
   background-color: black;
   color: white;
   text-align: center;
+}
+
+.style-box {
+  background-color: rgba(0, 0, 0, 0.5);
+  list-style: none;
+  padding: 10%;
+  opacity: 80%;
+  font-size: large;
+  color: white;
+  border-radius: 8%;
 }
 
 #dataHeader {
@@ -120,9 +129,11 @@ footer {
   font-family: "Handjet", cursive;
   background-color: black;
   color: white;
+  font-size: large;
   text-align: center;
   white-space: nowrap;
-  padding: 20%;
+  padding: 40%;
+  margin-left: 40px;
   border-radius: 10px;
 }
 #dataSect #inputInfo {
@@ -130,12 +141,20 @@ footer {
   width: 70%;
 }
 
+#textarea {
+  margin: 20px;
+  font-size: large;
+}
+
 #dataMain {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   border: black solid 2px;
-  background-color: whitesmoke;
+  background-image: url("/assets/images/background3.png");
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
   height: 80%;
 }
 #dataMain #inputPlanet {
@@ -150,6 +169,7 @@ footer {
   max-height: 200px;
   display: flex;
   justify-content: end;
+  border-color: 5px solid black;
 }
 #dataMain #earthInfo {
   width: 49%;

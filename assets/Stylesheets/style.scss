@@ -96,6 +96,17 @@ footer {
   text-align: center;
 }
 
+//this styles the planet input text
+.style-box {
+  background-color:rgba(0, 0, 0, .5);
+  list-style: none;
+  padding: 10%;
+  opacity: 80%;
+  font-size: large;
+  color: white;
+  border-radius: 8%;
+  }
+
 #dataHeader {
   background-color: grey;
   height: 50px;
@@ -125,9 +136,11 @@ footer {
       font-family: 'Handjet', cursive;
       background-color: black;
       color: white;
+      font-size: large;
       text-align: center;
       white-space: nowrap;
-      padding: 20%;
+      padding: 40%;
+      margin-left: 40px;
       border-radius: 10px;
     }
   }
@@ -138,12 +151,21 @@ footer {
   }
 }
 
+#textarea {
+  margin: 20px;
+  font-size: large;
+}
+
+
 #dataMain {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   border: black solid 2px;
-  background-color: whitesmoke;
+  background-image: url('/assets/images/background3.png');
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
   height: 80%;
 
   #inputPlanet {
@@ -153,11 +175,14 @@ footer {
     flex-direction: row;
     justify-content: space-around;
 
+    
+
     img{
       max-width: 200px;
       max-height: 200px;
       display: flex;
       justify-content: end;
+      border-color: 5px solid black;
     }
   }
 
