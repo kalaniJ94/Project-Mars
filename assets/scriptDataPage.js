@@ -51,7 +51,7 @@ function kelvinToFahrenheit(K) {
   return (9 / 5) * (K - 273.15) + 32;
 }
 
-function clearData (){
+function clearData() {
   planetDataEl.textContent = "";
   planetImageEl.textContent = "";
   planetInfo.textContent = "";
@@ -96,28 +96,54 @@ function displayData() {
 }
 
 function displayImage() {
-  
+
 
   // gather object
   var object = storedRetrievedPlanet.toLowerCase();
   // create element and img src
   var displayPlanetImg = document.createElement("img");
   displayPlanetImg.src = `./assets/images/${object}.png`;
+  displayPlanetImg.setAttribute("id", "imgCtn");
 
+
+  // append
+  planetImageEl.append(displayPlanetImg);
+}
+
+
+function displayModal() {
   // begin modal language
-  displayPlanetImg.setAttribute("onclick", "document.getElementById('modal02').style.display='block'")
-  displayPlanetImg.setAttribute("class", "w3-hover-opacity" )
+  var object = storedRetrievedPlanet.toLowerCase();
+
+  var planetCtn = document.querySelector("#inputPlanet")
+
+  if (planetCtn) {
+    console.log("Connected");
+  }
+
+  planetCtn.setAttribute("onclick", "document.getElementById('modal02').style.display='block'")
+  planetCtn.setAttribute("class", "w3-hover-opacity")
   //modal object
   var modalObj = document.createElement("div");
-  modalObj.setAttribute("id", "modal02"), ("class", "w3-modal w3-animate-zoom", "onclick", "this.style.display='none'")
+  modalObj.setAttribute("id", "modal02");
+  modalObj.setAttribute("class", "w3-modal w3-animate-zoom");
+  modalObj.setAttribute("onclick", "this.style.display='none'");
+  var exitBtn = document.createElement("span");
+  exitBtn.innerHTML = "&times;"
+  exitBtn.classList.add("w3-closebtn");
+  exitBtn.setAttribute("onclick", "document.getElementById('modal02').style.display='none'")
+
   var modalImg = document.createElement("img");
-  modalImg.setAttribute("class", "w3-modal-content"), ("style", "'width:100%'")
+  modalImg.setAttribute("class", "w3-modal-content");
   modalImg.src = `./assets/images/${object}.png`;
   // append obj
   modalObj.append(modalImg);
-  displayPlanetImg.append(modalObj);
-  // append
-  planetImageEl.append(displayPlanetImg);
+  planetCtn.append(exitBtn);
+  planetCtn.append(modalObj);
+  console.log(modalObj);
+  console.log(modalImg);
+
+
 }
 
 function planetData() {
@@ -133,6 +159,7 @@ function planetData() {
 planetData();
 displayImage();
 displayData();
+displayModal();
 
 
 
@@ -140,81 +167,81 @@ function getPlanetData(planetName) {
   var apiUrl = "https://api.le-systeme-solaire.net/rest/bodies/" + planetName;
 
   fetch(apiUrl)
-      .then(function(response) {
-          if (response.ok) {
-              return response.json();
-          } else {
-              throw new Error("Error");
-          }
-      })
-      .then(function(data) {
-          // console.log(data);
+    .then(function (response) {
+      if (response.ok) {
+        return response.json();
+      } else {
+        throw new Error("Error");
+      }
+    })
+    .then(function (data) {
+      // console.log(data);
 
 
-          // Populate new information
-          var planetChosen = data.englishName;
-          var planetDensity = data.density;
-          var planetNumberOfMoons = 0;
-          var planetNameOfMoons = [];
+      // Populate new information
+      var planetChosen = data.englishName;
+      var planetDensity = data.density;
+      var planetNumberOfMoons = 0;
+      var planetNameOfMoons = [];
 
-          if (data.moons && Array.isArray(data.moons)) {
-              planetNumberOfMoons = data.moons.length; // Get the number of moons
-              data.moons.forEach((moon) => {
-                  planetNameOfMoons.push(moon.moon); // Add the name of each moon to the array
-              });
-          }
+      if (data.moons && Array.isArray(data.moons)) {
+        planetNumberOfMoons = data.moons.length; // Get the number of moons
+        data.moons.forEach((moon) => {
+          planetNameOfMoons.push(moon.moon); // Add the name of each moon to the array
+        });
+      }
 
-          var planetGravity = data.gravity;
-          var planetTempInKelvin = data.avgTemp;
-          var planetTempInFahrenheit = Math.round(
-              kelvinToFahrenheit(planetTempInKelvin)
-          );
+      var planetGravity = data.gravity;
+      var planetTempInKelvin = data.avgTemp;
+      var planetTempInFahrenheit = Math.round(
+        kelvinToFahrenheit(planetTempInKelvin)
+      );
 
-          // Populate the fetched data into list items
-          var displayPlanet2 = document.createElement("li");
-          var displayGravity2 = document.createElement("li");
-          var displayAvgTemp2 = document.createElement("li");
-          var displayDensity2 = document.createElement("li");
-          var displayMoons2 = document.createElement("li");
-          var displayMoonsArray2 = document.createElement("li");
+      // Populate the fetched data into list items
+      var displayPlanet2 = document.createElement("li");
+      var displayGravity2 = document.createElement("li");
+      var displayAvgTemp2 = document.createElement("li");
+      var displayDensity2 = document.createElement("li");
+      var displayMoons2 = document.createElement("li");
+      var displayMoonsArray2 = document.createElement("li");
 
-          displayPlanet2.textContent = `Object: ${planetChosen}`;
-          displayGravity2.textContent = `Gravity: ${planetGravity}`;
-          displayAvgTemp2.textContent = `Temperature in Fahrenheit: ${planetTempInFahrenheit}`;
-          displayDensity2.textContent = `Density: ${planetDensity}`;
-          displayMoons2.textContent = `Number of Moons: ${planetNumberOfMoons}`;
-          displayMoonsArray2.textContent = `Names of Moons: ${planetNameOfMoons}`;
+      displayPlanet2.textContent = `Object: ${planetChosen}`;
+      displayGravity2.textContent = `Gravity: ${planetGravity}`;
+      displayAvgTemp2.textContent = `Temperature in Fahrenheit: ${planetTempInFahrenheit}`;
+      displayDensity2.textContent = `Density: ${planetDensity}`;
+      displayMoons2.textContent = `Number of Moons: ${planetNumberOfMoons}`;
+      displayMoonsArray2.textContent = `Names of Moons: ${planetNameOfMoons}`;
 
-          // console.log(displayDensity2);
+      // console.log(displayDensity2);
 
-          // Append these list items to planetDataEl2
-          planetDataEl.append(displayPlanet2, displayGravity2, displayAvgTemp2, displayDensity2, displayMoons2, displayMoonsArray2);
-          
-          
-          // Append the image based on the planet's name
-          var planetImg = document.createElement("img");
-          planetImg.src = `./assets/images/${planetName.toLowerCase()}.png`;
-          planetImageEl.appendChild(planetImg);
-          console.log('hello!?', planetDataEl)
+      // Append these list items to planetDataEl2
+      planetDataEl.append(displayPlanet2, displayGravity2, displayAvgTemp2, displayDensity2, displayMoons2, displayMoonsArray2);
 
-          // Append short info blurb based on planet's name
-          // ... This assumes you already have the planetNames and planetInfo arrays available ...
-          for (var i = 0; i < planetNames.length; i++) {
-              if (planetChosen === planetNames[i]) {
-                  infoDisplay.textContent = planetInfo[i];
-                  break;
-              }
-          }
 
-          
-           
-      })
-      .catch(function(error) {
-          console.error(
-              "There was an issue with fetching the Planet's data:",
-              error
-          );
-      });
+      // Append the image based on the planet's name
+      var planetImg = document.createElement("img");
+      planetImg.src = `./assets/images/${planetName.toLowerCase()}.png`;
+      planetImageEl.appendChild(planetImg);
+      console.log('hello!?', planetDataEl)
+
+      // Append short info blurb based on planet's name
+      // ... This assumes you already have the planetNames and planetInfo arrays available ...
+      for (var i = 0; i < planetNames.length; i++) {
+        if (planetChosen === planetNames[i]) {
+          infoDisplay.textContent = planetInfo[i];
+          break;
+        }
+      }
+
+
+
+    })
+    .catch(function (error) {
+      console.error(
+        "There was an issue with fetching the Planet's data:",
+        error
+      );
+    });
 }
 
 planetLinks.forEach(function (link) {
