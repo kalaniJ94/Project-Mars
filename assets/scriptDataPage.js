@@ -99,6 +99,19 @@ function displayImage() {
   // create element and img src
   var displayPlanetImg = document.createElement("img");
   displayPlanetImg.src = `./assets/images/${object}.png`;
+
+  // begin modal language
+  displayPlanetImg.setAttribute("onclick", "document.getElementById('modal02').style.display='block'")
+  displayPlanetImg.setAttribute("class", "w3-hover-opacity" )
+  //modal object
+  var modalObj = document.createElement("div");
+  modalObj.setAttribute("id", "modal02"), ("class", "w3-modal w3-animate-zoom", "onclick", "this.style.display='none'")
+  var modalImg = document.createElement("img");
+  modalImg.setAttribute("class", "w3-modal-content"), ("style", "'width:100%'")
+  modalImg.src = `./assets/images/${object}.png`;
+  // append obj
+  modalObj.append(modalImg);
+  displayPlanetImg.append(modalObj);
   // append
   planetImageEl.append(displayPlanetImg);
 }
