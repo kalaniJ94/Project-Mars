@@ -3,7 +3,6 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: #290c88;
 }
 
 main {
@@ -165,7 +164,6 @@ footer {
   justify-content: space-around;
 }
 #dataMain #inputPlanet img {
-  max-width: 200px;
   max-height: 200px;
   display: flex;
   justify-content: end;
