@@ -12,8 +12,15 @@ main {
 main body {
   display: flex;
   flex-direction: column;
-  flex: 1;
   min-height: 100vh;
+}
+
+.page-container {
+  flex: 1 0 auto; /* This allows the container to grow in the available space */
+}
+
+.content-wrap {
+  flex: 1; /* This makes the content area grow to take up any available space */
 }
 
 .center-wrapper {
@@ -78,16 +85,7 @@ main body {
   font-family: "Handjet", cursive;
   color: white;
   background-color: black;
-  font: 25px;
-}
-
-footer {
-  border: solid 1px black;
-  margin-top: auto;
-  font-family: "Handjet", cursive;
-  background-color: black;
-  color: white;
-  text-align: center;
+  font: 40px;
 }
 
 .style-box {
@@ -149,7 +147,6 @@ footer {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-
   border: black solid 2px;
   background-image: url("/assets/images/background3.png");
   background-position: center center;
@@ -184,7 +181,10 @@ footer {
   justify-content: right;
 }
 
-.dataFooter {
+footer {
+  margin-top: auto;
+  font-family: "Handjet", cursive;
   background-color: black;
-  height: 15%;
+  color: white;
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */
