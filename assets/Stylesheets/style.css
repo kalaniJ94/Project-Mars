@@ -1,5 +1,4 @@
 main {
-  background-color: black;
   margin-bottom: 50px;
 }
 
@@ -7,6 +6,10 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background-image: url("/assets/images/background3.png");
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 header {
@@ -78,16 +81,13 @@ header {
 }
 
 #explainEL {
-  border: solid 1px black;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   color: white;
-  background-color: black;
   font-size: 18px;
   text-align: center;
 }
 
 .style-box {
-  background-color: rgba(0, 0, 0, 0.5);
   list-style: none;
   padding: 10%;
   opacity: 80%;
@@ -106,7 +106,6 @@ header {
   flex-direction: row;
   flex-wrap: wrap;
   height: 10%;
-  background-color: black;
   color: whitesmoke;
 }
 #dataSect #dataDropdown {
@@ -145,11 +144,6 @@ header {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  border: black solid 2px;
-  background-image: url("/assets/images/background3.png");
-  background-position: center center;
-  background-attachment: fixed;
-  background-size: cover;
   height: 80%;
 }
 #dataMain #inputPlanet {
@@ -171,6 +165,8 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  color: white;
+  opacity: 80%;
 }
 #dataMain #earthInfo #earth-photo {
   display: flex;
