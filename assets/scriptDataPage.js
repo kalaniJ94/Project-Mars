@@ -1,7 +1,12 @@
 var planetLinks = document.querySelectorAll(".dropdown-content a");
 var planetDataEl = document.getElementById('planet-data');
-var infoDisplay = document.querySelector("#textarea");
 var planetImageEl = document.querySelector("#inputPlanet");
+
+//vars for modals
+var infoDisplay = document.querySelector("#textarea");
+var nameDisplay = document.querySelector("#nameText");
+var factDisplay = document.querySelector("#factText");
+var historyDisplay = document.querySelector("#historyText");
 
 
 var storedRetrievedPlanet = localStorage.getItem("planetChosen");
@@ -38,6 +43,12 @@ var planetInfo = [
   "Neptune is the farthest planet from the sun, and was the first planet to be discovered through mathematical calculation. Not visible to Earth with the naked eye, the planet has been visit only once, by Voyager 2 in 1989.",
   "Last, but certainly not least, Pluto is the best known of the 'dwarf-planets' which orbit the Sun. Once thought to be a ball of ice, recent flybys have made it's rocky nature plain.",
 ];
+
+var factInfo = ["Moon Fact", "Venus Fact", "Mercury Fact", "Mars Fact", "Jupiter Fact", "Saturn Fact", "Uranus Fact", "Neptune Fact", "Pluto Fact"];
+var historyInfo = ["Moon History", "Venus History", "Mercury History", "Mars History", "Jupiter History", "Saturn History", "Uranus History", "Neptune History", "Pluto History"];
+var nameInfo = ["Moon Name", "Venus Name", "Mercury Name", "Mars Name", "Jupiter Name", "Saturn Name", "Uranus Name", "Neptune Name", "Pluto Name"];
+//tabbed modal
+var tabLink =document.getElementsByClassName("tabLink");
 
 // testing
 // console.log(`Object: ${retrievedPlanet}`);
@@ -148,6 +159,20 @@ function displayModal() {
 
 }
 
+function openTab(evt, cityName) {
+  var i, x, tabLinks;
+  x = document.getElementsByClassName("tab");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  var tabLinks = document.getElementsByClassName("tabLink");
+  for (i = 0; i < x.length; i++) {
+    tabLinks[i].classList.remove("w3-light-grey");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.classList.add("w3-light-grey");
+}
+
 function planetData() {
 
   for (var i = 0; i < planetNames.length; i++) {
@@ -229,14 +254,17 @@ function getPlanetData(planetName) {
       console.log('hello!?', planetDataEl)
 
       // Append short info blurb based on planet's name
-      // ... This assumes you already have the planetNames and planetInfo arrays available ...
       for (var i = 0; i < planetNames.length; i++) {
         if (planetChosen === planetNames[i]) {
           infoDisplay.textContent = planetInfo[i];
+          nameDisplay.textContent = nameInfo[i];
+          factDisplay.textContent = factInfo[i];
+          historyDisplay.textContent = historyInfo[i];
+          console.log(nameInfo);
           break;
         }
       }
-
+      
 
 
     })

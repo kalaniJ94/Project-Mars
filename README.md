@@ -53,6 +53,8 @@ https://www.nasa.gov/multimedia/imagegallery/iotd.html
 
 https://www.w3schools.com/w3css/default.asp
 
+https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_modal_tab
+
 ## License
 
 The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
