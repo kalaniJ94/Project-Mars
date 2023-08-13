@@ -76,31 +76,35 @@
 
 <body>
     <main id="dataMain">
+        <!-- selected object card -->
         <section>
             <ul id="planet-data" attr='test' class="style-box"></ul>
             <div id="inputPlanet" class="style-text"></div>
         </section>
+        
+        <!-- earth card -->
+        <section class="container">
+            <div class="card">
+                <section id="earth-photo"></section>
+                <section id="earthInfo">
+                    <!-- earth data on back-->
+                    <ul id="earth-data" style="list-style: none">
+                        <li>Object: Earth</li>
+                        <li>Gravity: 9.8 m/s2</li>
+                        <li>Temperature in Fahrenheit: 59°F</li>
+                        <li>Density: 5.5136 gm/cm3</li>
+                        <li>Number of Moons: 1</li>
+                        <li>Names of Moons: La Lune</li>
+                    </ul>
+                    <!-- <img id="earth-photo" src="./assets/images/earth.png" alt="Planet Earth"
+                        onclick="document.getElementById('modal01').style.display='block'" class="w3-hover-opacity">
+                    <span onclick="document.getElementById('id01').style.display='none'"></span>
+                    <div id="modal01" class="w3-modal w3-animate-zoom" onclick="this.style.display='none'">
+                        <img class="w3-modal-content" src="./assets/images/earth.png" style="width:100%">
+                    </div> -->
 
-
-
-        <section id="earthInfo">
-
-            <!-- earth data -->
-            <ul id="earth-data" style="list-style: none">
-                <li>Object: Earth</li>
-                <li>Gravity: 9.8 m/s2</li>
-                <li>Temperature in Fahrenheit: 59°F</li>
-                <li>Density: 5.5136 gm/cm3</li>
-                <li>Number of Moons: 1</li>
-                <li>Names of Moons: La Lune</li>
-            </ul>
-            <img id="earth-photo" src="./assets/images/earth.png" alt="Planet Earth"
-                onclick="document.getElementById('modal01').style.display='block'" class="w3-hover-opacity">
-            <span onclick="document.getElementById('id01').style.display='none'"></span>
-            <div id="modal01" class="w3-modal w3-animate-zoom" onclick="this.style.display='none'">
-                <img class="w3-modal-content" src="./assets/images/earth.png" style="width:100%">
+                </section>
             </div>
-
         </section>
     </main>
 
