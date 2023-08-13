@@ -81,7 +81,7 @@ function displayData() {
   displayGravity.textContent = gravity;
   displayAvgTemp.textContent = avgTemp;
   displayDensity.textContent = density;
-  displayMoons.textContent = storedPlanetNumberOfMoons;
+  displayMoons.textContent = `Number of Moons: ${storedPlanetNumberOfMoons}`;
   if (storedPlanetNumberOfMoons > 0) {
       displayMoonsArray.textContent = storedPlanetNameOfMoons;
   }
