@@ -124,40 +124,40 @@ function displayImage() {
 }
 
 
-function displayModal() {
-  // begin modal language
-  var object = storedRetrievedPlanet.toLowerCase();
+// function displayModal() {
+//   // begin modal language
+//   var object = storedRetrievedPlanet.toLowerCase();
 
-  var planetCtn = document.querySelector("#inputPlanet")
+//   var planetCtn = document.querySelector("#inputPlanet")
 
-  if (planetCtn) {
-    console.log("Connected");
-  }
+//   if (planetCtn) {
+//     console.log("Connected");
+//   }
 
-  planetCtn.setAttribute("onclick", "document.getElementById('modal02').style.display='block'")
-  planetCtn.setAttribute("class", "w3-hover-opacity")
-  //modal object
-  var modalObj = document.createElement("div");
-  modalObj.setAttribute("id", "modal02");
-  modalObj.setAttribute("class", "w3-modal w3-animate-zoom");
-  modalObj.setAttribute("onclick", "this.style.display='none'");
-  var exitBtn = document.createElement("span");
-  exitBtn.innerHTML = "&times;"
-  exitBtn.classList.add("w3-closebtn");
-  exitBtn.setAttribute("onclick", "document.getElementById('modal02').style.display='none'")
+//   planetCtn.setAttribute("onclick", "document.getElementById('modal02').style.display='block'")
+//   planetCtn.setAttribute("class", "w3-hover-opacity")
+//   //modal object
+//   var modalObj = document.createElement("div");
+//   modalObj.setAttribute("id", "modal02");
+//   modalObj.setAttribute("class", "w3-modal w3-animate-zoom");
+//   modalObj.setAttribute("onclick", "this.style.display='none'");
+//   var exitBtn = document.createElement("span");
+//   exitBtn.innerHTML = "&times;"
+//   exitBtn.classList.add("w3-closebtn");
+//   exitBtn.setAttribute("onclick", "document.getElementById('modal02').style.display='none'")
 
-  var modalImg = document.createElement("img");
-  modalImg.setAttribute("class", "w3-modal-content");
-  modalImg.src = `./assets/images/${object}.png`;
-  // append obj
-  modalObj.append(modalImg);
-  planetCtn.append(exitBtn);
-  planetCtn.append(modalObj);
-  console.log(modalObj);
-  console.log(modalImg);
+//   var modalImg = document.createElement("img");
+//   modalImg.setAttribute("class", "w3-modal-content");
+//   modalImg.src = `./assets/images/${object}.png`;
+//   // append obj
+//   modalObj.append(modalImg);
+//   planetCtn.append(exitBtn);
+//   planetCtn.append(modalObj);
+//   console.log(modalObj);
+//   console.log(modalImg);
 
 
-}
+// }
 
 function openTab(evt, cityName) {
   var i, x, tabLinks;
