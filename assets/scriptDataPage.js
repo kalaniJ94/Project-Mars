@@ -63,9 +63,9 @@ function displayData() {
 
   // gather local storage elements
   var planet = `Object: ${storedRetrievedPlanet}`;
-  var gravity = `Gravity: ${storedPlanetGravity}`;
-  var avgTemp = `Temperature in Fahrenheit: ${storedPlanetTempInFahrenheit}`;
-  var density = `Density: ${storedPlanetDensity}`;
+  var gravity = `Gravity: ${storedPlanetGravity} m/s2`;
+  var avgTemp = `Temperature in Fahrenheit: ${storedPlanetTempInFahrenheit}°F`;
+  var density = `Density: ${storedPlanetDensity} gm/cm3`;
   var moons = `Number of Moons: ${storedPlanetNumberOfMoons}`;
   var moonsArray = `Names of Moons: ${storedPlanetNameOfMoons.join(", ")}`;
 
@@ -81,8 +81,10 @@ function displayData() {
   displayGravity.textContent = gravity;
   displayAvgTemp.textContent = avgTemp;
   displayDensity.textContent = density;
-  displayMoons.textContent = moons;
-  displayMoonsArray.textContent = moonsArray;
+  displayMoons.textContent = storedPlanetNumberOfMoons;
+  if (storedPlanetNumberOfMoons > 0) {
+      displayMoonsArray.textContent = storedPlanetNameOfMoons;
+  }
 
   // append to the html
   planetDataEl.append(
@@ -206,11 +208,13 @@ function getPlanetData(planetName) {
       var displayMoonsArray2 = document.createElement("li");
 
       displayPlanet2.textContent = `Object: ${planetChosen}`;
-      displayGravity2.textContent = `Gravity: ${planetGravity}`;
-      displayAvgTemp2.textContent = `Temperature in Fahrenheit: ${planetTempInFahrenheit}`;
-      displayDensity2.textContent = `Density: ${planetDensity}`;
+      displayGravity2.textContent = `Gravity: ${planetGravity} m/s2`;
+      displayAvgTemp2.textContent = `Temperature in Fahrenheit: ${planetTempInFahrenheit}°F`;
+      displayDensity2.textContent = `Density: ${planetDensity} gm/cm3`;
       displayMoons2.textContent = `Number of Moons: ${planetNumberOfMoons}`;
-      displayMoonsArray2.textContent = `Names of Moons: ${planetNameOfMoons}`;
+    if (planetNumberOfMoons > 0) {
+        displayMoonsArray2.textContent = `Names of Moons: ${planetNameOfMoons.join(", ")}`;
+    }
 
       // console.log(displayDensity2);
 
