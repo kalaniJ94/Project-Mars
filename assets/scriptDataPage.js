@@ -237,7 +237,7 @@ function getPlanetData(planetName) {
       displayAvgTemp2.textContent = `Temperature in Fahrenheit: ${planetTempInFahrenheit}°F`;
       displayDensity2.textContent = `Density: ${planetDensity} gm/cm3`;
       displayMoons2.textContent = `Number of Moons: ${planetNumberOfMoons}`;
-    if (planetNumberOfMoons > 0) {
+      if (planetNumberOfMoons > 0) {
         displayMoonsArray2.textContent = `Names of Moons: ${planetNameOfMoons.join(", ")}`;
     }
 
