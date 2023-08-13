@@ -1,6 +1,7 @@
 
 main {
   margin-bottom: 50px;
+  font: white;
 
 }
 
@@ -32,8 +33,6 @@ header{
   justify-content: center;
   align-items: center;
   position: absolute;
-  // top: 0;
-  // left: 0;
   width: 100%;
   height: 100%;
 }
@@ -52,7 +51,6 @@ header{
   font-size: 30px;
   text-align: center;
   white-space: nowrap;
-  // padding: 20%;
   border-radius: 10px;
 }
 
@@ -71,7 +69,6 @@ header{
 .dropdown-content a {
   color: white;
   background-color: black;
-  // padding: 12px 16px;
   text-decoration: none;
   display: block;
 }
@@ -93,7 +90,7 @@ header{
 
 
 
-//this styles the planet input text
+
 .style-box {
   list-style: none;
   padding: 10%;
@@ -114,10 +111,12 @@ header{
   flex-wrap: wrap;
   height: 10%;
   color: whitesmoke;
+}
 
   #dataDropdown {
     height: 50px;
     width: 30%;
+  }
 
     .data-center-wrapper {
       width: 50px;
@@ -138,13 +137,13 @@ header{
       margin-left: 40px;
       border-radius: 10px;
     }
-  }
+  
 
   #inputInfo {
     height: 100px;
     width: 70%;
   }
-}
+
 
 #textarea {
   margin: 20px;
@@ -157,6 +156,7 @@ header{
   flex-direction: row;
   flex-wrap: wrap;
   height: 80%;
+}
 
   #inputPlanet {
     width: 49%;
@@ -164,7 +164,7 @@ header{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-
+  }
     
 
     img{
@@ -173,7 +173,7 @@ header{
       justify-content: end;
       border-color: 5px solid black;
     }
-  }
+  
 
   #earthInfo {
     width: 49%;
@@ -183,6 +183,7 @@ header{
     justify-content: space-around;
     color: white;
     opacity: 80%;
+  }
 
     #earth-photo{
       display: flex;
@@ -190,15 +191,12 @@ header{
       max-height: 200px;
       justify-content: right;
     }
-    }
-  }
+    
 
 footer {
   margin-top: auto;
   background-color: black;
   color: white;
   text-align: center;
-  
   opacity: 65%;
 }
-
