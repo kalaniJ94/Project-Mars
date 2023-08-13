@@ -241,6 +241,8 @@ header{
   justify-content: center;
   align-items: center;
   gap: 5rem;
+  text-align: center;
+  overflow: scroll;
 }
     
 
