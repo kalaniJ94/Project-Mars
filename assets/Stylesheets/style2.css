@@ -157,7 +157,7 @@ header{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  height: 80%;
+  height: 75%;
   justify-content: space-evenly;
 }
 
@@ -168,13 +168,15 @@ header{
     flex-direction: row;
     justify-content: space-around;
   }
+  
     
 
     img{
-      max-height: 200px;
+      /* max-height: 200px; */
       display: flex;
       justify-content: end;
       border-color: 5px solid black;
+      align-items: center;
     }
 
 
@@ -183,6 +185,7 @@ header{
   width: 450px;
   height: 450px;
   perspective: 800px;
+  
 }
 
 /* controls rotation */
@@ -215,6 +218,7 @@ header{
   background-image: url(/assets/images/earth.png);
 }
 
+
 #earthInfo,
 #planet-data-container
 {
@@ -233,6 +237,22 @@ header{
   font-size: 25px;
 }
 
+#planet-data::-webkit-scrollbar{
+  width: 10px;
+}
+#planet-data::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+#planet-data::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+#planet-data::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
 footer {
   margin-top: auto;
   background-color: black;
