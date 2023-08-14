@@ -92,8 +92,9 @@ function displayData() {
   displayGravity.textContent = gravity;
   displayAvgTemp.textContent = avgTemp;
   displayDensity.textContent = density;
-  displayMoons.textContent = `Number of Moons: ${storedPlanetNumberOfMoons}`;
+  
   if (storedPlanetNumberOfMoons > 0) {
+    displayMoons.textContent = `Number of Moons: ${storedPlanetNumberOfMoons}`;
     displayMoonsArray.textContent = storedPlanetNameOfMoons;
   }
 
@@ -196,8 +197,9 @@ function getPlanetData(planetName) {
       displayGravity2.textContent = `Gravity: ${planetGravity} m/s2`;
       displayAvgTemp2.textContent = `Temperature in Fahrenheit: ${planetTempInFahrenheit}°F`;
       displayDensity2.textContent = `Density: ${planetDensity} gm/cm3`;
-      displayMoons2.textContent = `Number of Moons: ${planetNumberOfMoons}`;
+      
       if (planetNumberOfMoons > 0) {
+        displayMoons2.textContent = `Number of Moons: ${planetNumberOfMoons}`;
         displayMoonsArray2.textContent = `Names of Moons: ${planetNameOfMoons.join(", ")}`;
       }
 
