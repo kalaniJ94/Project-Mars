@@ -11,7 +11,7 @@ body {
   min-height: 100vh;
   background-image: url('/assets/images/background3.png');
   background-position: center center;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
   background-size: cover;
 }
 
