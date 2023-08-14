@@ -44,11 +44,11 @@ var planetInfo = [
   "Last, but certainly not least, Pluto is the best known of the 'dwarf-planets' which orbit the Sun. Once thought to be a ball of ice, recent flybys have made it's rocky nature plain.",
 ];
 
-var factInfo = ["Moon Fact", "Venus Fact", "Mercury Fact", "Mars Fact", "Jupiter Fact", "Saturn Fact", "Uranus Fact", "Neptune Fact", "Pluto Fact"];
-var historyInfo = ["Moon History", "Venus History", "Mercury History", "Mars History", "Jupiter History", "Saturn History", "Uranus History", "Neptune History", "Pluto History"];
-var nameInfo = ["Moon Name", "Venus Name", "Mercury Name", "Mars Name", "Jupiter Name", "Saturn Name", "Uranus Name", "Neptune Name", "Pluto Name"];
+var factInfo = ["The Moon gets 3.78cm further away from the Earth every year, about the same rate that your fingernails grow.", "Venus is the second brightest object in the night sky, after the Moon.", "Mercury can sometimes produce 'magnetic tornados', a result of solar winds interacting with the planet's magnetic field.", "The 'red' color Mars is famous for is a result of dust from iron oxide, more commonly known as rust!", "Jupiter is known as the SOlar System's vacuum cleaner, due to it's tendency to absorb comets and asteroids away from inner planets. ", "Winds on Saturn can reach up to 1,118MPH!", "The atmosphere of Uranus contains suspended ice, made up of methane, water, and other hydrocarbons.", "Neptune's gravity force is the most similar to Earth's in the solar system.", "Pluto's unusual orbit sometime's take it closer to the sun than Neptune."];
+var historyInfo = ["The moon was likely formed 50 million years after the formation of the Solar System. Several theories have been put forward regarding it's creation, but a impact event is the most widely accepted. ", "Venus has a long history of being observed, due to it's visibility, with histories recorded as far back as ancient China and Sumeria", "The earliest recorded observation of Mercury stems from a Assyrian tablet, around 14th century BC.", "Mars is covered in impact craters, the largest of which is the Borealis Basin, which covers 40% of the planet's surface. ", "Jupiter is theorized to be the oldest planet in the Solar System, and likely began as having a rocky core that accumulated gas during the formation of the Solar System. ", "The rings of Saturn were first seen in 1655 by Christiaan Huygens.", "Uranus was recorded as being a comet or star for much of it's early history, until it was finally discovered to be a planet in the late 1700's.", "Neptune's discovery was a subject of intense nationalistic rivalry between France and Britain, until two astronomers settled on co-discoverer status.", "Pluto was discovered in 1930 by Clyde Tombaugh, who used photographs to rapidly compare movement among solar bodies."];
+var nameInfo = ["The word Moon comes from the Old English term 'mōna'. 'Luna' is occasionally used to distinguish it from other Moons. ", "Venus is named after the Roman goddess of love and beauty, most likely because of it's bright appearance in the night sky.", "Mercury is named after the Roman messenger god, of the same name. Ancient Greeks originally had two names for the planet, believing the object to be two separate stars.", "Mars is named after the Roman god of war, Mars.", "Jupiter is the name of the chief god of the Roman Pantheon. ", "Saturn is the Roman god of wealth and agriculture.", "Uranus is named after the Greek deity of the Sky and grandfather of Zeus, Uranus.", "Neptune is named after the Greek god of the Sea, and was widely adopted in the mid 1800's.", "Pluto is the Roman god of the Underworld, and was chosen via contest after it's discovery in 1930."];
 //tabbed modal
-var tabLink =document.getElementsByClassName("tabLink");
+var tabLink = document.getElementsByClassName("tabLink");
 
 // testing
 // console.log(`Object: ${retrievedPlanet}`);
@@ -94,7 +94,7 @@ function displayData() {
   displayDensity.textContent = density;
   displayMoons.textContent = `Number of Moons: ${storedPlanetNumberOfMoons}`;
   if (storedPlanetNumberOfMoons > 0) {
-      displayMoonsArray.textContent = storedPlanetNameOfMoons;
+    displayMoonsArray.textContent = storedPlanetNameOfMoons;
   }
 
   // append to the html
@@ -123,42 +123,6 @@ function displayImage() {
   planetImageEl.append(displayPlanetImg);
 }
 
-
-// function displayModal() {
-//   // begin modal language
-//   var object = storedRetrievedPlanet.toLowerCase();
-
-//   var planetCtn = document.querySelector("#inputPlanet")
-
-//   if (planetCtn) {
-//     console.log("Connected");
-//   }
-
-//   planetCtn.setAttribute("onclick", "document.getElementById('modal02').style.display='block'")
-//   planetCtn.setAttribute("class", "w3-hover-opacity")
-//   //modal object
-//   var modalObj = document.createElement("div");
-//   modalObj.setAttribute("id", "modal02");
-//   modalObj.setAttribute("class", "w3-modal w3-animate-zoom");
-//   modalObj.setAttribute("onclick", "this.style.display='none'");
-//   var exitBtn = document.createElement("span");
-//   exitBtn.innerHTML = "&times;"
-//   exitBtn.classList.add("w3-closebtn");
-//   exitBtn.setAttribute("onclick", "document.getElementById('modal02').style.display='none'")
-
-//   var modalImg = document.createElement("img");
-//   modalImg.setAttribute("class", "w3-modal-content");
-//   modalImg.src = `./assets/images/${object}.png`;
-//   // append obj
-//   modalObj.append(modalImg);
-//   planetCtn.append(exitBtn);
-//   planetCtn.append(modalObj);
-//   console.log(modalObj);
-//   console.log(modalImg);
-
-
-// }
-
 function openTab(evt, cityName) {
   var i, x, tabLinks;
   x = document.getElementsByClassName("tab");
@@ -186,9 +150,6 @@ function planetData() {
 planetData();
 displayImage();
 displayData();
-displayModal();
-
-
 
 function getPlanetData(planetName) {
   var apiUrl = "https://api.le-systeme-solaire.net/rest/bodies/" + planetName;
@@ -203,7 +164,6 @@ function getPlanetData(planetName) {
     })
     .then(function (data) {
       // console.log(data);
-
 
       // Populate new information
       var planetChosen = data.englishName;
@@ -239,7 +199,7 @@ function getPlanetData(planetName) {
       displayMoons2.textContent = `Number of Moons: ${planetNumberOfMoons}`;
       if (planetNumberOfMoons > 0) {
         displayMoonsArray2.textContent = `Names of Moons: ${planetNameOfMoons.join(", ")}`;
-    }
+      }
 
       // console.log(displayDensity2);
 
@@ -264,9 +224,6 @@ function getPlanetData(planetName) {
           break;
         }
       }
-      
-
-
     })
     .catch(function (error) {
       console.error(

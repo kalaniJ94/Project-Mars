@@ -27,3 +27,12 @@ Rough Breakdown of tasks:
     8/8: Kalani gets SASS up and running on CSS
         Alexa gets local storage going
         Colton gets caught up, HTML and CSS
+
+
+
+        Notes: Challenges
+
+        Early Mockup:
+
+        Credits: 
+
