@@ -89,7 +89,9 @@ header{
 }
 
 
-
+.w3-modal-content{
+  /* margin: 0px  */
+}
 
 .style-box {
   list-style: none;
@@ -155,7 +157,8 @@ header{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  height: 80%;
+  height: 75%;
+  justify-content: space-evenly;
 }
 
   #inputPlanet {
@@ -165,39 +168,24 @@ header{
     flex-direction: row;
     justify-content: space-around;
   }
+  
     
 
     img{
-      max-height: 200px;
+      /* max-height: 200px; */
       display: flex;
       justify-content: end;
       border-color: 5px solid black;
+      align-items: center;
     }
-  
-
-  /* #earthInfo {
-    width: 49%;
-    height: 400px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    color: white;
-    opacity: 80%;
-  }
-
-    #earth-photo{
-      display: flex;
-      max-width: 200px;
-      max-height: 200px;
-      justify-content: right;
-    } */
 
 
 /* earth card */
 .container {
-  width: 350px;
-  height: 500px;
+  width: 450px;
+  height: 450px;
   perspective: 800px;
+  
 }
 
 /* controls rotation */
@@ -232,9 +220,11 @@ header{
   background-image: url(/assets/images/earth.png);
 }
 
+
 #earthInfo,
-#planet-data-container {
-  font-size: 20px;
+#planet-data-container
+{
+  font-size: 25px;
   background-image: url(/assets/images/background3.png);
   color: white;
   transform: rotateY(180deg);
@@ -251,10 +241,17 @@ header{
   scrollbar-color: black;
 }
 
+/* Handle on hover */
+#planet-data::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
 footer {
   margin-top: auto;
   background-color: black;
   color: white;
   text-align: center;
   opacity: 65%;
+  height: 50px;
+  width: 100%;
+  margin: 20px 0px -20px 0px;
 }
