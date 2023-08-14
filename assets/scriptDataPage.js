@@ -48,7 +48,7 @@ var factInfo = ["Moon Fact", "Venus Fact", "Mercury Fact", "Mars Fact", "Jupiter
 var historyInfo = ["Moon History", "Venus History", "Mercury History", "Mars History", "Jupiter History", "Saturn History", "Uranus History", "Neptune History", "Pluto History"];
 var nameInfo = ["Moon Name", "Venus Name", "Mercury Name", "Mars Name", "Jupiter Name", "Saturn Name", "Uranus Name", "Neptune Name", "Pluto Name"];
 //tabbed modal
-var tabLink =document.getElementsByClassName("tabLink");
+var tabLink = document.getElementsByClassName("tabLink");
 
 // testing
 // console.log(`Object: ${retrievedPlanet}`);
@@ -94,7 +94,7 @@ function displayData() {
   displayDensity.textContent = density;
   displayMoons.textContent = `Number of Moons: ${storedPlanetNumberOfMoons}`;
   if (storedPlanetNumberOfMoons > 0) {
-      displayMoonsArray.textContent = storedPlanetNameOfMoons;
+    displayMoonsArray.textContent = storedPlanetNameOfMoons;
   }
 
   // append to the html
@@ -123,42 +123,6 @@ function displayImage() {
   planetImageEl.append(displayPlanetImg);
 }
 
-
-// function displayModal() {
-//   // begin modal language
-//   var object = storedRetrievedPlanet.toLowerCase();
-
-//   var planetCtn = document.querySelector("#inputPlanet")
-
-//   if (planetCtn) {
-//     console.log("Connected");
-//   }
-
-//   planetCtn.setAttribute("onclick", "document.getElementById('modal02').style.display='block'")
-//   planetCtn.setAttribute("class", "w3-hover-opacity")
-//   //modal object
-//   var modalObj = document.createElement("div");
-//   modalObj.setAttribute("id", "modal02");
-//   modalObj.setAttribute("class", "w3-modal w3-animate-zoom");
-//   modalObj.setAttribute("onclick", "this.style.display='none'");
-//   var exitBtn = document.createElement("span");
-//   exitBtn.innerHTML = "&times;"
-//   exitBtn.classList.add("w3-closebtn");
-//   exitBtn.setAttribute("onclick", "document.getElementById('modal02').style.display='none'")
-
-//   var modalImg = document.createElement("img");
-//   modalImg.setAttribute("class", "w3-modal-content");
-//   modalImg.src = `./assets/images/${object}.png`;
-//   // append obj
-//   modalObj.append(modalImg);
-//   planetCtn.append(exitBtn);
-//   planetCtn.append(modalObj);
-//   console.log(modalObj);
-//   console.log(modalImg);
-
-
-// }
-
 function openTab(evt, cityName) {
   var i, x, tabLinks;
   x = document.getElementsByClassName("tab");
@@ -186,9 +150,6 @@ function planetData() {
 planetData();
 displayImage();
 displayData();
-displayModal();
-
-
 
 function getPlanetData(planetName) {
   var apiUrl = "https://api.le-systeme-solaire.net/rest/bodies/" + planetName;
@@ -203,7 +164,6 @@ function getPlanetData(planetName) {
     })
     .then(function (data) {
       // console.log(data);
-
 
       // Populate new information
       var planetChosen = data.englishName;
@@ -239,7 +199,7 @@ function getPlanetData(planetName) {
       displayMoons2.textContent = `Number of Moons: ${planetNumberOfMoons}`;
       if (planetNumberOfMoons > 0) {
         displayMoonsArray2.textContent = `Names of Moons: ${planetNameOfMoons.join(", ")}`;
-    }
+      }
 
       // console.log(displayDensity2);
 
@@ -264,9 +224,6 @@ function getPlanetData(planetName) {
           break;
         }
       }
-      
-
-
     })
     .catch(function (error) {
       console.error(
