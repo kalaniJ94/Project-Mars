@@ -239,6 +239,7 @@ header{
 #planet-data{
   overflow-y: auto;
   scrollbar-color: black;
+  font-size: 25px;
 }
 
 /* Handle on hover */
