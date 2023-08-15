@@ -266,14 +266,20 @@ footer {
 }
 
 /* responsiveness */
-@media screen and (max-width: 900px) {
-  /* center info button */
-  .dropdown-button {
-    justify-content: center;
+@media screen and (max-width: 899px) {
+  /* hide the header */
+  header {
+    position: absolute;
+    top: -999px;
+    left: -999px;
   }
-  /* hide text element */
-  #explainEl,
-  #dataHeader {
-    display: none;
+}
+
+@media screen and (max-width: 560px) {
+  /* stack the buttons */
+  .dropdown {
+    display: inline-block;
   }
+  
+
 }
