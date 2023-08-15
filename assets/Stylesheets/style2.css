@@ -264,3 +264,16 @@ footer {
   width: 100%;
   margin: 20px 0px -20px 0px;
 }
+
+/* responsiveness */
+@media screen and (max-width: 900px) {
+  /* center info button */
+  .dropdown-button {
+    justify-content: center;
+  }
+  /* hide text element */
+  #explainEl,
+  #dataHeader {
+    display: none;
+  }
+}

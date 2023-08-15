@@ -48,6 +48,8 @@ header {
   font-size: 30px;
   text-align: center;
   white-space: nowrap;
+  margin-top: 400px;
+  padding: 8%;
   border-radius: 10px;
 }
 
