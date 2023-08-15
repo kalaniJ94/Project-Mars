@@ -76,7 +76,7 @@ function getPlanetData(planetName) {
         JSON.stringify(planetNameOfMoons)
       );
 
-      window.location.href = '/dataPage.html'; //take user to new page
+      window.location.href = './dataPage.html'; //take user to new page
 
     })
     .catch(function (error) {
