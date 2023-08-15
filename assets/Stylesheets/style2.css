@@ -15,6 +15,13 @@ body {
   background-size: cover;
 }
 
+#modalButton{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
 header{
   padding: 30px;
   margin: 30px;
@@ -30,16 +37,6 @@ body > div > button{
 
 .page-container {
   flex: 1 0 auto; /* This allows the container to grow in the available space */
-}
-
-
-.center-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  width: 100%;
-  height: 100%;
 }
 
 .dropdown {
@@ -102,23 +99,31 @@ body > div > button{
   color: white;
   border-radius: 8%;
   }
-
+header{
+  margin: 10px;
+  text-align: center;
+  
+}
 #dataHeader {
   background-color: grey;
   height: 50px;
 }
 
+
+/* this changes the header information */
 #dataSect {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   height: 10%;
   color: whitesmoke;
+  justify-content: center;
 }
 
   #dataDropdown {
     height: 50px;
     width: 30%;
+    margin: 10px 0px 30px 30px;
   }
 
     .data-center-wrapper {
@@ -127,7 +132,7 @@ body > div > button{
       margin: 0px 0px 0px 50px;
       min-width: none;
     }
-
+/* the "select place from beyond" button styling */
     .data-dropdown-button {
       cursor: pointer;
       font-family: 'Handjet', cursive;
@@ -241,6 +246,10 @@ body > div > button{
   font-size: 25px;
 }
 
+#modalButton > button{
+  margin: 10px 30px 0px 0px;
+}
+
 /* Handle on hover */
 #planet-data::-webkit-scrollbar-thumb:hover {
   background: #555;
@@ -254,17 +263,4 @@ footer {
   height: 50px;
   width: 100%;
   margin: 20px 0px -20px 0px;
-}
-
-/* responsiveness */
-@media screen and (max-width: 900px) {
-  /* center info button */
-  .dropdown-button {
-    justify-content: center;
-  }
-  /* hide text element */
-  #explainEl,
-  #dataHeader {
-    display: none;
-  }
 }

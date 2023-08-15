@@ -37,6 +37,7 @@ header {
   display: flex;
   justify-content: center;
   position: relative;
+  margin: 10px;
 }
 
 .dropdown-button {
@@ -178,4 +179,10 @@ footer {
   color: white;
   text-align: center;
   opacity: 65%;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    display: none;
+  }
 }/*# sourceMappingURL=style.css.map */
