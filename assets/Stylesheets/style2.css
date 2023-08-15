@@ -9,7 +9,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-image: url('./assets/images/background3.png');
+  background-image: url('/assets/images/background3.png');
   background-position: center center;
   /* background-attachment: fixed; */
   background-size: cover;
@@ -218,7 +218,7 @@ body > div > button{
 }
 
 #earth-photo {
-  background-image: url(./assets/images/earth.png);
+  background-image: url('/assets/images/earth.png');
 }
 
 
@@ -226,7 +226,7 @@ body > div > button{
 #planet-data-container
 {
   font-size: 25px;
-  background-image: url(./assets/images/background3.png);
+  background-image: url('/assets/images/background3.png');
   color: white;
   transform: rotateY(180deg);
   display: flex;
