@@ -107,6 +107,18 @@ function displayData() {
     displayMoons,
     displayMoonsArray
   );
+
+  for (var i = 0; i < planetNames.length; i++) {
+    if (storedRetrievedPlanet === planetNames[i]) {
+      infoDisplay.textContent = planetInfo[i];
+      nameDisplay.textContent = nameInfo[i];
+      factDisplay.textContent = factInfo[i];
+      historyDisplay.textContent = historyInfo[i];
+      console.log(nameInfo);
+      break;
+    }
+  }
+
 }
 
 function displayImage() {
