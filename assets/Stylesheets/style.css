@@ -13,8 +13,8 @@ body {
 }
 
 header {
-  padding: 10px;
-  margin: 10px;
+  padding: 30px;
+  margin: 30px;
   border: 5px solid black;
   background-color: black;
   opacity: 65%;
@@ -39,6 +39,7 @@ header {
   display: flex;
   justify-content: center;
   position: relative;
+  margin: 10px;
 }
 
 .dropdown-button {
@@ -49,7 +50,8 @@ header {
   font-size: 30px;
   text-align: center;
   white-space: nowrap;
-  padding: 20%;
+  margin-top: 400px;
+  padding: 8%;
   border-radius: 10px;
 }
 
@@ -62,12 +64,12 @@ header {
   min-width: 160px;
   max-height: 150px;
   overflow: auto;
+  z-index: 1000;
 }
 
 .dropdown-content a {
   color: white;
   background-color: black;
-  padding: 12px 16px;
   text-decoration: none;
   display: block;
 }
@@ -181,4 +183,10 @@ footer {
   color: white;
   text-align: center;
   opacity: 65%;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    display: none;
+  }
 }/*# sourceMappingURL=style.css.map */
