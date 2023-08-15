@@ -244,6 +244,7 @@ header{
   overflow-y: auto;
   scrollbar-color: black;
   font-size: 25px;
+  color: white;
 }
 
 #modalButton > button{
@@ -266,14 +267,30 @@ footer {
 }
 
 /* responsiveness */
-@media screen and (max-width: 900px) {
-  /* center info button */
-  .dropdown-button {
-    justify-content: center;
+@media screen and (max-width: 899px) {
+  /* hide the header */
+  header {
+    position: absolute;
+    top: -999px;
+    left: -999px;
   }
-  /* hide text element */
-  #explainEl,
-  #dataHeader {
-    display: none;
+}
+
+@media screen and (max-width: 560px) {
+  /* stack the buttons */
+  .container {
+    width: 300px;
+    height: 300px;
   }
+  
+  #earthInfo,
+  #planet-data {
+    font-size: 20px;
+  }
+
+  #earth-image {
+    width: 300px;
+    height: 300px;
+  }
+
 }
