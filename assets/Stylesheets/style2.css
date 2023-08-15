@@ -15,6 +15,12 @@ body {
   background-size: cover;
 }
 
+#modalButton{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 header{
   padding: 30px;
   margin: 30px;
@@ -119,6 +125,7 @@ body > div > button{
   #dataDropdown {
     height: 50px;
     width: 30%;
+    margin: 10px 0px 30px 30px;
   }
 
     .data-center-wrapper {
@@ -239,6 +246,10 @@ body > div > button{
   overflow-y: auto;
   scrollbar-color: black;
   font-size: 25px;
+}
+
+#modalButton > button{
+  margin: 10px 30px 0px 0px;
 }
 
 /* Handle on hover */
