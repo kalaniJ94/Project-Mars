@@ -38,6 +38,7 @@ header {
   justify-content: center;
   position: relative;
   margin: 10px;
+  padding: 50px;
 }
 
 .dropdown-button {
