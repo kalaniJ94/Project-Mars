@@ -288,4 +288,9 @@ footer {
     font-size: 20px;
   }
 
+  #earth-image {
+    width: 300px;
+    height: 300px;
+  }
+
 }
