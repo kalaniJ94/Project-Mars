@@ -173,7 +173,6 @@ body > div > button{
     
 
     img{
-      /* max-height: 200px; */
       display: flex;
       justify-content: end;
       border-color: 5px solid black;
