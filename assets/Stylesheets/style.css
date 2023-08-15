@@ -37,6 +37,7 @@ header {
   display: flex;
   justify-content: center;
   position: relative;
+  margin: 10px;
 }
 
 .dropdown-button {
@@ -47,6 +48,8 @@ header {
   font-size: 30px;
   text-align: center;
   white-space: nowrap;
+  margin-top: 400px;
+  padding: 8%;
   border-radius: 10px;
 }
 
@@ -178,4 +181,10 @@ footer {
   color: white;
   text-align: center;
   opacity: 65%;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    display: none;
+  }
 }/*# sourceMappingURL=style.css.map */
