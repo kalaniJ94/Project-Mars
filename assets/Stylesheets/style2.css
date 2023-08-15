@@ -277,9 +277,10 @@ footer {
 
 @media screen and (max-width: 560px) {
   /* stack the buttons */
-  .dropdown {
-    display: inline-block;
+  .container {
+    width: 300px;
+    height: 300px;
   }
-  
+
 
 }
