@@ -30,9 +30,7 @@ function getPlanetData(planetName) {
       }
     })
     .then(function (data) {
-      console.log(data);
       var planetChosen = data.englishName;
-      console.log(planetChosen);
       var planetDensity = data.density;
       // Moons
       var planetNumberOfMoons = 0;
@@ -44,19 +42,13 @@ function getPlanetData(planetName) {
           planetNameOfMoons.push(moon.moon); // Add the name of each moon to the array
         });
       }
-      console.log(planetNumberOfMoons);
-      console.log(planetNameOfMoons);
-      console.log("Hello There");
+      
 
       var planetGravity = data.gravity;
       var planetTempInKelvin = data.avgTemp;
       var planetTempInFahrenheit = Math.round(
         kelvinToFahrenheit(planetTempInKelvin)
       );
-      console.log(
-        "Average Temp of " + planetName + ": " + planetTempInFahrenheit + "°F"
-      );
-      console.log(`Density: ${planetDensity}  Gravity: ${planetGravity}`);
 
       //store items in local storage
       
@@ -100,7 +92,6 @@ function getNasaPhoto() {
       }
     })
     .then(function (data) {
-      console.log(data);
 
       // add text
       var photoInformation = data[0].explanation;
@@ -108,7 +99,6 @@ function getNasaPhoto() {
 
       var dateTaken = data[0].date;
       var dateFormat = dayjs(dateTaken).format("MMMM D, YYYY");
-      console.log(dateFormat);
 
       // Check if date is available and format it
       var dateInfo = dateTaken ? `Date: ${dateFormat}` : "";
