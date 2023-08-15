@@ -1,10 +1,3 @@
-
-main {
-  margin-bottom: 50px;
-  font: white;
-
-}
-
 body {
   display: flex;
   flex-direction: column;
@@ -191,6 +184,7 @@ header{
   height: 450px;
   perspective: 800px;
   
+  
 }
 
 /* controls rotation */
@@ -206,6 +200,7 @@ header{
   transition: transform 1500ms;
   transform-style: preserve-3d;
   
+  
 }
 
 #earth-photo,
@@ -218,6 +213,7 @@ header{
   box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
   position: absolute;
   backface-visibility: hidden;
+  
   
 }
 
@@ -238,6 +234,7 @@ header{
   justify-content: center;
   align-items: center;
   gap: 5rem;
+  
 }
     
 #planet-data{
@@ -261,9 +258,7 @@ footer {
   color: white;
   text-align: center;
   opacity: 65%;
-  height: 50px;
   width: 100%;
-  margin: 20px 0px -20px 0px;
 }
 
 /* responsiveness */
