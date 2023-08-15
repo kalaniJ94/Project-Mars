@@ -202,3 +202,9 @@ footer {
   opacity: 65%;
 }
 
+@media screen and (max-width: 768px) {
+  // remove text
+  header{
+    display: none;
+  }
+}
