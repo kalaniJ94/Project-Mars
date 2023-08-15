@@ -23,10 +23,8 @@ header{
   background-color: black;
   opacity: 80%;
 }
-
-body > button{
-width: fit-content;
-margin: 0px 0px 30px 30px;
+body > div > button{
+  margin: 0px 0px 30px 30px;
 }
 
 .page-container {
@@ -93,11 +91,6 @@ margin: 0px 0px 30px 30px;
   color: white;
   font-size: 18px;
   text-align: center;
-}
-
-
-.w3-modal-content{
-  /* margin: 0px  */
 }
 
 .style-box {
@@ -240,7 +233,6 @@ margin: 0px 0px 30px 30px;
   justify-content: center;
   align-items: center;
   gap: 5rem;
-  
 }
     
 #planet-data{
