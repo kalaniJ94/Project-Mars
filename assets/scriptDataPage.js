@@ -69,8 +69,6 @@ function displayData() {
   var gravity = `Gravity: ${storedPlanetGravity} m/s2`;
   var avgTemp = `Temperature in Fahrenheit: ${storedPlanetTempInFahrenheit}°F`;
   var density = `Density: ${storedPlanetDensity} gm/cm3`;
-  var moons = `Number of Moons: ${storedPlanetNumberOfMoons}`;
-  var moonsArray = `Names of Moons: ${storedPlanetNameOfMoons.join(", ")} `;
 
   // create a new tag for each element
   var displayPlanet = document.createElement("li");
