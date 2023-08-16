@@ -182,9 +182,7 @@ header{
 .container {
   width: 450px;
   height: 450px;
-  perspective: 800px;
-  
-  
+  perspective: 800px; 
 }
 
 /* controls rotation */
@@ -199,8 +197,6 @@ header{
   position: relative;
   transition: transform 1500ms;
   transform-style: preserve-3d;
-  
-  
 }
 
 #earth-photo,
@@ -213,8 +209,6 @@ header{
   box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
   position: absolute;
   backface-visibility: hidden;
-  
-  
 }
 
 #earth-photo {
@@ -234,7 +228,6 @@ header{
   justify-content: center;
   align-items: center;
   gap: 5rem;
-  
 }
     
 #planet-data{
@@ -252,6 +245,7 @@ header{
 #planet-data::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
 footer {
   margin-top: auto;
   background-color: black;
@@ -271,7 +265,6 @@ footer {
     top: -999px;
     left: -999px;
   }
-
 }
 
 @media screen and (max-width: 560px) {
