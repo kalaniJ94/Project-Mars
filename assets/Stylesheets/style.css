@@ -50,7 +50,6 @@ header {
   text-align: center;
   align-items: center;
   white-space: nowrap;
-  margin-top: 400px;
   padding: 8%;
   border-radius: 10px;
 }
@@ -182,7 +181,12 @@ footer {
   opacity: 65%;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
+  .dropdown-button {
+    margin-top: 400px;
+  }
+}
+@media screen and (max-width: 868px) {
   header {
     display: none;
   }
