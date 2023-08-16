@@ -147,7 +147,7 @@ header{
 
 
 #textarea {
-  margin: 20px;
+  margin: -22px;
   font-size: large;
 }
 
@@ -262,6 +262,8 @@ footer {
 }
 
 /* responsiveness */
+
+
 @media screen and (max-width: 899px) {
   /* hide the header */
   header {
@@ -269,6 +271,7 @@ footer {
     top: -999px;
     left: -999px;
   }
+
 }
 
 @media screen and (max-width: 560px) {
