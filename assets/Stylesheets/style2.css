@@ -147,7 +147,7 @@ header{
 
 
 #textarea {
-  margin: 20px;
+  margin: -22px;
   font-size: large;
 }
 
@@ -182,9 +182,7 @@ header{
 .container {
   width: 450px;
   height: 450px;
-  perspective: 800px;
-  
-  
+  perspective: 800px; 
 }
 
 /* controls rotation */
@@ -197,10 +195,8 @@ header{
   height: 100%;
   width: 100%;
   position: relative;
-  transition: transform 1500ms;
+  transition: transform 2000ms;
   transform-style: preserve-3d;
-  
-  
 }
 
 #earth-photo,
@@ -213,8 +209,6 @@ header{
   box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
   position: absolute;
   backface-visibility: hidden;
-  
-  
 }
 
 #earth-photo {
@@ -234,7 +228,6 @@ header{
   justify-content: center;
   align-items: center;
   gap: 5rem;
-  
 }
     
 #planet-data{
@@ -252,6 +245,7 @@ header{
 #planet-data::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
 footer {
   margin-top: auto;
   background-color: black;
@@ -262,6 +256,8 @@ footer {
 }
 
 /* responsiveness */
+
+
 @media screen and (max-width: 899px) {
   /* hide the header */
   header {
@@ -287,4 +283,15 @@ footer {
     background-size: contain;
   }
 
+  #modalButton{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   text-align: center;
+
+  }
+
+  .data-dropdown-button{
+    margin-left: -34px;
+  }
 }
