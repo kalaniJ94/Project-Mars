@@ -16,10 +16,6 @@ header {
   opacity: 65%;
 }
 
-main {
-  flex: 1;
-}
-
 .center-wrapper {
   display: flex;
   justify-content: center;
@@ -36,7 +32,6 @@ main {
   justify-content: center;
   position: relative;
   margin: 10px;
-  padding: 50px;
 }
 
 .page-container {
@@ -133,9 +128,6 @@ main {
   font-size: large;
   text-align: center;
   white-space: nowrap;
-  padding: 40%;
-  margin-left: 40px;
-  border-radius: 10px;
 }
 #dataSect #inputInfo {
   height: 100px;
