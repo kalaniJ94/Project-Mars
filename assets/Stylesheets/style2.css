@@ -195,7 +195,7 @@ header{
   height: 100%;
   width: 100%;
   position: relative;
-  transition: transform 1500ms;
+  transition: transform 2000ms;
   transform-style: preserve-3d;
 }
 
