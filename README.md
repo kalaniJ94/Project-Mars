@@ -79,6 +79,9 @@ https://sass-lang.com/
 
 https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_modal_tab
 
+w3 School Flip Card 
+https://www.w3schools.com/howto/howto_css_flip_card.asp
+
 ## License
 
 MIT License
