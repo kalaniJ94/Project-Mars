@@ -284,8 +284,7 @@ footer {
   }
 
   #earth-photo {
-    height: fit-content;
-    width: fit-content;
+    background-size: contain;
   }
 
 }
