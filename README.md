@@ -3,20 +3,31 @@
 # User Story
 1. As a User, I want to search through Celestial Bodies in our Solar System, So that I can see how our planet compares to other bodies in our system. 
 
-2. As a User, I want to see images of our solar system, so that when I look at the data, I can have a visual. 
-
-3. 
-
+2. As a User, I want to see images of our solar system.
 
 # Acceptance Criteria
-
+GIVEN a webpage with clickable planet or Solar object data.
+WHEN I load the index page.
+THEN I am presented with a clean, easy way to select an object.
+WHEN I load the index page.
+THEN I am presented with a random photo of space, with information about that picture.
+WHEN I select an object.
+THEN I am taken to a page with data on that object, 
+WHEN I see the selected object data
+THEN I am given comparable data on Earth as well.
 
 
 ## Description
 
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
+When we (Project Space: Alexa, Colton and Kalani) were first the project parameters (Two Serverside Apis connected and displaying dynamically), our first priority was to do something was unique, and did not feel like it had been done before. 
 
-Description will go here: sdsdsd
+We feel we have done that with our project: A site that displays and compares data about objects in our solar system against data about the Earth. The objects are chosen by the user, pulled from the API, and displayed dynamically. The Site also features a random NASA picture of the day from their photo API.
+
+The project was a perfect way to cap off the first third of our Fullstack Web Development Bootcamp. HTML, CSS, and most importantly, Javascript skills were all utilized to their full extent to devolp a website that we are all incredibly proud of.
+
+There were several challenges along the way, from learning new CSS systems on the fly, to always-present git issues (big shoutout to our very patient TA Kirtley, for helping us through those!). I think we are all more confident in our own skills for having come out the other side of this Project. 
+
+As I've said, we are all incredibly proud of our project, and can't wait to show it off. 
 
 ## Table of Contents (Optional)
 
@@ -29,19 +40,25 @@ If your README is long, add a table of contents to make it easy for users to fin
 
 ## Installation
 
-What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
+There is no installation required for the operation of this website.
 
 https://kalanij94.github.io/Project-Mars/
 
 ## Usage
 
-Provide instructions and examples for use. Include screenshots as needed.
+To use this website, you will need to first navigate to the homepage, found [here](https://kalanij94.github.io/Project-Mars/). Once there, you will notice the background is dynamically updated upon refresh to see a different picture. These images are taken straight from NASA's [APOD API](https://api.nasa.gov/), and also feature the picture's title, the name of the person credited for the picture, and the explanation of what the picture is, also taken from the APOD API. You'll also have a dropdown menu to select "A Place From Beyond". Clicking a planet or solar object will take you to the data page.
+![Picture of Home Page](assets/images/Screenshots/screenshotMainPage.png)
+![Picture of Home Page](assets/images/Screenshots/screenshotMainPage2.png)
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative file path, add it to your README using the following syntax:
+Upon loading the data page, you will first find the header contains a short introduction to the object chosen. Below that are two buttons. To the left is the same button as the main page, which allows you to choose another object if desired. To the right is a button which will display a tabbed modal, which contains additional information about the selected object. This information is NOT pulled from the API. Both the header and information text are pulled from an array in the JS, via a looping "For" function. 
 
+Two cards make the main section of the data page, the left being the selected object and the right being Earth. The front of the card is a photo of the object. They both rotate upon hovering over the card, to reveal certain data on those objects. That data is taken [from](https://api.le-systeme-solaire.net/en/) to display dynamically onto the cards. [Here](https://kalanij94.github.io/Project-Mars/dataPage.html) is a link directly to the data page of our website. 
+![Data Page appearance](assets/images/Screenshots/dataPage.png)
+![Dropdown demo](assets/images/Screenshots/datapageDropdown.png)
+![Data Card 1](assets/images/Screenshots/dataCard1.png)
+![Data Card 2](assets/images/Screenshots/dataCard2.png)
+![More info Tab](assets/images/Screenshots/moreinfo.png)
 
-![Picture of Home Page](assets/images/screenshotMainPage.png)
-![Picture of Home Page](assets/images/screenshotMainPage2.png)
 
 ## Credits
 
@@ -54,7 +71,11 @@ https://api.nasa.gov/
 Website for Data Page Background Image:
 https://www.nasa.gov/multimedia/imagegallery/iotd.html
 
+W3's CSS format Home page, used for dynamic styling of html elements:
 https://www.w3schools.com/w3css/default.asp
+
+SCSS, external CSS stylesheet:
+https://sass-lang.com/
 
 https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_modal_tab
 
@@ -84,22 +105,8 @@ SOFTWARE.
 
 ---
 
-🏆 The previous sections are the bare minimum, and your project will ultimately determine the content of this document. You might also want to consider adding the following sections.
-
-## Badges
-
-![badmath](https://img.shields.io/github/languages/top/nielsenjared/badmath)
-
-Badges aren't necessary, but they demonstrate street cred. Badges let other developers know that you know what you're doing. Check out the badges hosted by [shields.io](https://shields.io/). You may not understand what they all represent now, but you will in time.
-
-## Features
-
-If your project has a lot of features, list them here.
-
 ## How to Contribute
 
-If you created an application or package and would like other developers to contribute to it, you can include guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own if you'd prefer.
+If you've like to contribute to this project, please reach out! We are incredibly proud of the work, and also of the numerous future opportunities for future features it could hold.  
 
-## Tests
-
-Go the extra mile and write tests for your application. Then provide examples on how to run them here
+Before you reach out, please be familiar with the [Contributor Covenant](https://www.contributor-covenant.org/) and the code of conduct within.
