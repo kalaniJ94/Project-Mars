@@ -287,4 +287,15 @@ footer {
     background-size: contain;
   }
 
+  #modalButton{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   text-align: center;
+
+  }
+
+  .data-dropdown-button{
+    margin-left: -34px;
+  }
 }
