@@ -31,8 +31,6 @@ As I've said, we are all incredibly proud of our project, and can't wait to show
 
 ## Table of Contents (Optional)
 
-If your README is long, add a table of contents to make it easy for users to find what they need.
-
 - [Installation](#installation)
 - [Usage](#usage)
 - [Credits](#credits)
@@ -78,6 +76,9 @@ SCSS, external CSS stylesheet:
 https://sass-lang.com/
 
 https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_modal_tab
+
+Transform CSS Propety
+https://developer.mozilla.org/en-US/docs/Web/CSS/transform
 
 ## License
 
