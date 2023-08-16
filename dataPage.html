@@ -12,110 +12,117 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <style>
-        .tab {display:none}
-        </style>
+        .tab {
+            display: none
+        }
+    </style>
     <link rel="stylesheet" href="./assets/Stylesheets/style2.css">
 
 </head>
 
 <body>
     <div class="page-container">
-    
-    <header>
-<section id="dataSect">
-       
-        <section id="inputInfo">
-            <div id="textarea">
-            </div>
-        </section>
-    </header>
-    <div id="modalButton">
-        <section id="dataDropdown">
-            <div class="data-center-wrapper">
-                <div class="dropdown">
-                    <button class="data-dropdown-button">Select a place from Beyond</button>
-                    <div class="dropdown-content">
-                        <a href="#">Moon</a>
-                        <a href="#">Venus</a>
-                        <a href="#">Mercury</a>
-                        <a href="#">Mars</a>
-                        <a href="#">Jupiter</a>
-                        <a href="#">Saturn</a>
-                        <a href="#">Uranus</a>
-                        <a href="#">Neptune</a>
-                        <a href="#">Pluto</a>
+
+        <header>
+            <section id="dataSect">
+
+                <section id="inputInfo">
+                    <div id="textarea"></div>
+                </section>
+            </section>
+        </header>
+        <div id="modalButton">
+            <section id="dataDropdown">
+                <div class="data-center-wrapper">
+                    <div class="dropdown">
+                        <button class="data-dropdown-button">Select a place from Beyond</button>
+                        <div class="dropdown-content">
+                            <a href="#">Moon</a>
+                            <a href="#">Venus</a>
+                            <a href="#">Mercury</a>
+                            <a href="#">Mars</a>
+                            <a href="#">Jupiter</a>
+                            <a href="#">Saturn</a>
+                            <a href="#">Uranus</a>
+                            <a href="#">Neptune</a>
+                            <a href="#">Pluto</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black">Want more
+                info about this planet?</button>
+
+            <div id="id01" class="w3-modal">
+                <div class="w3-modal-content w3-card-4 w3-animate-zoom ">
+
+                    <div class="w3-bar w3-border-bottom">
+                        <button class="tabLink w3-bar-item w3-button w3-black" onclick="openTab(event, 'funFact')">Fun
+                            Fact</button>
+                        <button class="tabLink w3-bar-item w3-button w3-black"
+                            onclick="openTab(event, 'history')">Planet's History</button>
+                        <button class="tabLink w3-bar-item w3-button w3-black" onclick="openTab(event, 'name')">What's
+                            in a name?</button>
+                        <div class="w3-container w3-light-grey w3-padding">
+                            <button class="w3-button w3-right w3-white w3-border"
+                                onclick="document.getElementById('id01').style.display='none'">Close</button>
+                        </div>
+                    </div>
+
+                    <div id="funFact" class="w3-container tab w3-white">
+                        <h1>Fun Fact</h1>
+                        <p id="factText"></p>
+                    </div>
+
+                    <div id="history" class="w3-container tab w3-white">
+                        <h1>History</h1>
+                        <p id="historyText"></p>
+                    </div>
+
+                    <div id="name" class="w3-container tab w3-white">
+                        <h1>Name</h1>
+                        <p id="nameText"></p>
                     </div>
                 </div>
             </div>
-        </section>
-        <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black">Want more info about this planet?</button>
-
-        <div id="id01" class="w3-modal">
-            <div class="w3-modal-content w3-card-4 w3-animate-zoom ">
-
-                <div class="w3-bar w3-border-bottom">
-                    <button class="tabLink w3-bar-item w3-button w3-black" onclick="openTab(event, 'funFact')">Fun Fact</button>
-                    <button class="tabLink w3-bar-item w3-button w3-black" onclick="openTab(event, 'history')">Planet's History</button>
-                    <button class="tabLink w3-bar-item w3-button w3-black" onclick="openTab(event, 'name')">What's in a name?</button>
-                    <div class="w3-container w3-light-grey w3-padding">
-                        <button class="w3-button w3-right w3-white w3-border" 
-                        onclick="document.getElementById('id01').style.display='none'">Close</button>
-                       </div>
-                </div>
-
-                <div id="funFact" class="w3-container tab w3-white">
-                    <h1>Fun Fact</h1>
-                    <p id="factText"></p>
-                   </div>
-
-                <div id="history" class="w3-container tab w3-white">
-                    <h1>History</h1>
-                    <p id="historyText"></p>
-                   </div>
-                 
-                   <div id="name" class="w3-container tab w3-white">
-                    <h1>Name</h1>
-                    <p id="nameText"></p>
-                   </div>
-             </div>    
-          </div>
         </div>
-    </section>
 
 
-    <main id="dataMain">
-        <!-- selected object card -->
-        <section class="container">
-            <div class="card">
-                <section id="inputPlanet" class="style-text"></section>
-                <section id="planet-data-container">
-                    <ul id="planet-data" attr='test' class="style-box"></ul>
-                </section>
-            </div>
-        </section>
-        
-        <!-- earth card -->
-        <section class="container">
-            <div class="card">
-                <section id="earth-photo" >
-                    <img src="assets/images/earth.png">
-                </section>
-                <section id="earthInfo">
-                    <!-- earth data on back-->
-                    <ul id="earth-data" style="list-style: none">
-                        <li>Object: Earth</li>
-                        <li>Gravity: 9.8 m/s2</li>
-                        <li>Temperature in Fahrenheit: 59°F</li>
-                        <li>Density: 5.5136 gm/cm3</li>
-                        <li>Number of Moons: 1</li>
-                        <li>Names of Moons: La Lune</li>
-                    </ul>
-                   
-                </section>
-            </div>
-        </section>
-    </div>    
-    <footer class="dataFooter">Made by Project-Space: Alexa, Colton and Kalani!</footer>
+        <main id="dataMain">
+            <!-- selected object card -->
+            <section class="container">
+                <div class="card">
+                    <section id="inputPlanet" class="style-text"></section>
+                    <section id="planet-data-container">
+                        <ul id="planet-data" attr='test' class="style-box"></ul>
+                    </section>
+                </div>
+            </section>
+
+            <!-- earth card -->
+            <section class="container">
+                <div class="card">
+                    <section id="earth-photo" class="shrink">
+                        <!-- <img src="assets/images/earth.png" id="earth-image"> -->
+                    </section>
+                    <section id="earthInfo">
+                        <!-- earth data on back-->
+                        <ul id="earth-data" style="list-style: none">
+                            <li>Object: Earth</li>
+                            <li>Gravity: 9.8 m/s2</li>
+                            <li>Temperature in Fahrenheit: 59°F</li>
+                            <li>Density: 5.5136 gm/cm3</li>
+                            <li>Number of Moons: 1</li>
+                            <li>Names of Moons: La Lune</li>
+                        </ul>
+
+                    </section>
+                </div>
+            </section>
+        </main>
+    </div>
+    <footer class="dataFooter">Made by Project-Space: Alexa, Colton and Kalani!
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
         integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
