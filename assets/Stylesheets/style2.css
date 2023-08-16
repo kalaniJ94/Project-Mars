@@ -283,9 +283,9 @@ footer {
     font-size: 20px;
   }
 
-  #earth-image {
-    width: 300px;
-    height: 300px;
+  #earth-photo {
+    height: fit-content;
+    width: fit-content;
   }
 
 }
